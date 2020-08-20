@@ -1,4 +1,4 @@
-localhost
+arbochelli.download
 
 file_server browse {
     hide .git* mp3 .mscbackup Template.mscz
