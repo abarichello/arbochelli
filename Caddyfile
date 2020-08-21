@@ -1,5 +1,16 @@
+# localhost
 arbochelli.download
 
-file_server browse {
-    hide .git* mp3 .mscbackup Template.mscz
+templates
+
+file_server {
+    hide .git* *.html mp3 .mscbackup Template.mscz
+    browse template.html
+}
+
+log {
+    output file /tmp/arbochelli.log {
+        roll_size 1gb
+        roll_keep 3
+    }
 }
