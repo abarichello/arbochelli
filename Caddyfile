@@ -4,7 +4,7 @@ arbochelli.download
 templates
 
 file_server {
-    hide .git* *.html mp3 .mscbackup Template.mscz
+    hide .git* *.html .mscbackup Template.mscz
     browse template.html
 }
 
