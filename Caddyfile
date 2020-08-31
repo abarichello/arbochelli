@@ -8,6 +8,8 @@ file_server {
     browse template.html
 }
 
+rewrite / {uri}?sort=name&order=desc
+
 log {
     output file /tmp/arbochelli.log {
         roll_size 1gb
