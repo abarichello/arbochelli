@@ -171,7 +171,7 @@ img[src*="spacer"]:empty, [id*="round"]:empty, [id*="bottom"]:empty, [class*="bo
   background-image: none !important;
 }
 
-nav, menu, html body [class*="open"], html body [id*="Dropdown"], html body [id*="dropdown"], html body [class*="Dropdown"],
+h1, nav, menu, html body [class*="open"], html body [id*="Dropdown"], html body [id*="dropdown"], html body [class*="Dropdown"],
 html body [class*="dropdown"], html body [id*="menu"]:not(SELECT), html body [class*="menu"]:NOT(SELECT), html body [class*="tooltip"],
 html body [class*="popup"], html body [id*="popup"], html body [class*="note"], html body [class*="detail"], html body [class*="description"] {
   background-color: #232323 !important
@@ -444,6 +444,14 @@ footer {
         max-width: 100px;
     }
 }
+hr {
+  width: 7%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+h3 {
+  background-color: #141414 !important;
+}
 </style>
     </head>
     <body onload='initFilter()'>
@@ -488,10 +496,10 @@ footer {
             </defs>
         </svg>
         <header>
-            <img src="https://i.imgur.com/y9qtxzn.png" width="75"></img>
-            <h1>
-                {{range $i, $crumb := .Breadcrumbs}}<a href="{{html $crumb.Link}}">{{html $crumb.Text}}</a>{{if ne $i 0}}/{{end}}{{end}}
-            </h1>
+          <h1>Arbochelli Sheet Music</h1>
+          <h3>
+            {{range $i, $crumb := .Breadcrumbs}}<a href="{{html $crumb.Link}}">{{html $crumb.Text}}</a>{{if ne $i 0}}/{{end}}{{end}}
+          </h3>
         </header>
         <main>
             <div class="meta">
@@ -595,20 +603,23 @@ footer {
             <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
             <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
           </form><style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 15px 7px 10px !important;line-height: 35px !important;height:51px !important;text-decoration: none !important;display:inline-flex !important;color:#000000 !important;background-color:#FFFFFF !important;border-radius: 8px !important;border: 1px solid transparent !important;font-size: 18px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#000000 !important;}</style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/barichello"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px;font-size:18px !important;">Buy me a coffee</span></a>
-          <br>
-          <br>
-          <br>
+          <hr>
+          <!-- todo: social section buttons -->
           Corrections, requests and questions can be sent to:<br>
           <img width="200" src="https://i.imgur.com/y4nkMQN.png"></a>
+          <hr>
+          All files are <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC-BY-NC-SA 3.0</a> licensed.
           <br>
+          Served with <a rel="noopener noreferrer" href="https://caddyserver.com">Caddy</a>.
+          <hr>
+          <img title="Arbochelli Kat Logo" src="https://i.imgur.com/y9qtxzn.png" width="100"></img>
+          <img title="Mae from Night in The Woods playing bass" src="https://i.imgur.com/28tMtPZ.png" width="110"></img>
           <br>
-          <br>
-          All files are <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC-BY-NC-SA 3.0</a> licensed.<br>
-          Served with <a rel="noopener noreferrer" href="https://caddyserver.com">Caddy</a>.<br>
-          <img width="150" src="https://i.imgur.com/VLHL7Yj.png"></img>
+          <img title="My signature" src="https://i.imgur.com/VLHL7Yj.png" width="200"></img>
         </footer>
         <script>
             replaceDash();
+
             var filterEl = document.getElementById('filter');
             filterEl.focus();
 
