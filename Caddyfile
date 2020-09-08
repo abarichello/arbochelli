@@ -16,5 +16,6 @@ handle_errors {
 }
 
 log {
+    format json
     output file /tmp/arbochelli.log
 }
