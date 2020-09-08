@@ -2,17 +2,19 @@
 arbochelli.download
 
 templates
+encode gzip
+rewrite / {uri}?sort=name&order=desc
 
 file_server {
     hide .git* tmp *.html .mscbackup
     browse template.html
 }
 
-rewrite / {uri}?sort=name&order=desc
+handle_errors {
+    rewrite * /{http.error.status_code}
+    reverse_proxy https://http.cat
+}
 
 log {
-    output file /tmp/arbochelli.log {
-        roll_size 1gb
-        roll_keep 3
-    }
+    output file /tmp/arbochelli.log
 }
