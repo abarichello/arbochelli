@@ -19,3 +19,5 @@ log {
     format json
     output file /tmp/arbochelli.log
 }
+
+rewrite /muse-dash-option-theme /pdf/Muse_Dash_-_Option_Theme.pdf
