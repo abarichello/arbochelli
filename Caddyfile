@@ -20,4 +20,5 @@ log {
     output file /tmp/arbochelli.log
 }
 
-rewrite /muse-dash-option-theme /pdf/Muse_Dash_-_Option_Theme.pdf
+rewrite /muse-dash-option-theme         /pdf/Muse_Dash_-_Option_Theme.pdf
+rewrite /sing-yesterday-ep-9            /pdf/Sing_Yesterday_for_Me_-_Episode_9.pdf
