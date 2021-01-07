@@ -3,9 +3,10 @@ arbochelli.download {
     templates
     encode gzip
     rewrite / {uri}?sort=name&order=desc
+    redir /p/* https://pdf.arbochelli.download?r={path}
 
     file_server {
-        hide .git* tmp *.html .mscbackup
+        hide .git* tmp *.html .mscbackup redirect
         browse template.html
     }
 
@@ -27,4 +28,9 @@ arbochelli.download {
 
 log.arbochelli.download {
     reverse_proxy http://localhost:3000
+}
+
+pdf.arbochelli.download {
+    root * redirect
+    file_server
 }
