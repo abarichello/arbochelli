@@ -1,3 +1,12 @@
+log.arbochelli.download {
+    reverse_proxy http://localhost:3000
+}
+
+pdf.arbochelli.download {
+    root * redirect
+    file_server
+}
+
 # localhost {
 arbochelli.download {
     templates
@@ -24,13 +33,6 @@ arbochelli.download {
     rewrite /sing-yesterday-ep-9            /pdf/Sing_Yesterday_for_Me_-_Episode_9.pdf
     rewrite /potsu-lookin-up                /pdf/potsu_-_lookin_up.pdf
     rewrite /archosaur-city-b1              /pdf/Perfect_World_-_City_B1__Archosaur.pdf
-}
-
-log.arbochelli.download {
-    reverse_proxy http://localhost:3000
-}
-
-pdf.arbochelli.download {
-    root * redirect
-    file_server
+    rewrite /i-want-to-eat-your-pancreas    /pdf/Kimi_no_Suizou_wo_Tabetai.pdf
+    rewrite /shadow-warrior2-larrys-blues   /pdf/Shadow_Warrior_2_-_Larrys_Blues_in_Blue.pdf
 }
