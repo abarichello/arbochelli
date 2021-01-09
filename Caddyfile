@@ -5,6 +5,9 @@ log.arbochelli.download {
 pdf.arbochelli.download {
     root * redirect
     file_server
+    handle_errors {
+        redir * https://arbochelli.download/?status={http.error.status_code}
+    }
 }
 
 # localhost {
