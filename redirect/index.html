@@ -16,9 +16,10 @@
       const redir = urlParams.get("r");
       if (urlParams.has("r") && redir !== "") {
         umami.trackView(redir)
+        document.getElementById('text').textContent = `Redirecting to ${redir}...`;
         setTimeout(() => {
-          window.location = "https://arbochelli.download/" + redir.substr(3);
-        }, 500);
+          window.location = "https://arbochelli.download/" + redir
+        }, 650);
       } else {
         document.getElementById('text').textContent = "No redirect";
       }

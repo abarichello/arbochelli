@@ -12,7 +12,7 @@ arbochelli.download {
     templates
     encode gzip
     rewrite / {uri}?sort=name&order=desc
-    redir /p/* https://pdf.arbochelli.download?r={path}
+    redir /p/* https://pdf.arbochelli.download?r={http.request.uri.path.1}
 
     file_server {
         hide .git* tmp *.html .mscbackup redirect
@@ -20,13 +20,15 @@ arbochelli.download {
     }
 
     handle_errors {
-        rewrite * /{http.error.status_code}
-        reverse_proxy https://http.cat
+        redir * /?status={http.error.status_code}
     }
 
     log {
         format json
-        output file /tmp/arbochelli.log
+        output file /tmp/arbochelli.log {
+            roll_size 200mb
+            roll_keep 5
+        }
     }
 
     rewrite /muse-dash-option-theme         /pdf/Muse_Dash_-_Option_Theme.pdf
