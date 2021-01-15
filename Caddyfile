@@ -40,4 +40,5 @@ arbochelli.download {
     rewrite /archosaur-city-b1              /pdf/Perfect_World_-_City_B1__Archosaur.pdf
     rewrite /i-want-to-eat-your-pancreas    /pdf/Kimi_no_Suizou_wo_Tabetai.pdf
     rewrite /shadow-warrior2-larrys-blues   /pdf/Shadow_Warrior_2_-_Larrys_Blues_in_Blue.pdf
+    rewrite /donut-county-lazy-river        /pdf/Donut_County_-_Lazy_River.pdf
 }
