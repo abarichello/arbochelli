@@ -18,7 +18,7 @@ arbochelli.download {
     redir /p/* https://pdf.arbochelli.download?r={http.request.uri.path.1}
 
     file_server {
-        hide .git* tmp *.html .mscbackup redirect
+        hide .git* tmp *.html .mscbackup redirect *.sh
         browse template.html
     }
 
