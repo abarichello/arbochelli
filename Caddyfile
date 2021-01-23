@@ -10,10 +10,10 @@ pdf.arbochelli.download {
     }
 }
 
-# localhost {
-arbochelli.download {
+localhost arbochelli.download http://arbochoyaqk5tcdce5e32gi5wyy5zol2x34r6nd3b2vf77bdhdrllfid.onion {
     templates
     encode gzip
+    header Onion-Location http://arbochoyaqk5tcdce5e32gi5wyy5zol2x34r6nd3b2vf77bdhdrllfid.onion
     rewrite / {uri}?sort=name&order=desc
     redir /p/* https://pdf.arbochelli.download?r={http.request.uri.path.1}
 
