@@ -42,4 +42,5 @@ localhost arbochelli.download http://basssssxls7b72rf6b2nngxcwhndx6r2k42bcbyx6dk
     rewrite /shadow-warrior2-larrys-blues   /pdf/Shadow_Warrior_2_-_Larrys_Blues_in_Blue.pdf
     rewrite /donut-county-lazy-river        /pdf/Donut_County_-_Lazy_River.pdf
     rewrite /tokyo-police-club-bambi        /pdf/Tokyo_Police_Club_-_Bambi.pdf
+    rewrite /beastars-many-stories          /pdf/Beastars_-_Many_Stories.pdf
 }
