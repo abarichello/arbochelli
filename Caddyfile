@@ -14,6 +14,7 @@ localhost arbochelli.download http://basssssxls7b72rf6b2nngxcwhndx6r2k42bcbyx6dk
     templates
     encode zstd gzip
     header Onion-Location http://basssssxls7b72rf6b2nngxcwhndx6r2k42bcbyx6dkeps7ilh3nwlqd.onion
+
     rewrite / {uri}?sort=name&order=desc
     redir /p/* https://pdf.arbochelli.download?r={http.request.uri.path.1}
 
