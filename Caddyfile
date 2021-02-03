@@ -15,6 +15,7 @@ pdf.{$DOMAIN:localhost} {
     encode zstd gzip
     header Onion-Location http://basssssxls7b72rf6b2nngxcwhndx6r2k42bcbyx6dkeps7ilh3nwlqd.onion
 
+    import redirect/rewrite.txt
     rewrite / {uri}?sort=name&order=desc
     redir /p/* https://pdf.{$DOMAIN:localhost}?r={http.request.uri.path.1}
 
@@ -34,15 +35,4 @@ pdf.{$DOMAIN:localhost} {
             roll_keep 5
         }
     }
-
-    rewrite /muse-dash-option-theme              /pdf/Muse_Dash_-_Option_Theme.pdf
-    rewrite /sing-yesterday-ep-9                 /pdf/Sing_Yesterday_for_Me_-_Episode_9.pdf
-    rewrite /potsu-lookin-up                     /pdf/potsu_-_lookin_up.pdf
-    rewrite /archosaur-city-b1                   /pdf/Perfect_World_-_City_B1__Archosaur.pdf
-    rewrite /i-want-to-eat-your-pancreas         /pdf/Kimi_no_Suizou_wo_Tabetai.pdf
-    rewrite /shadow-warrior2-larrys-blues        /pdf/Shadow_Warrior_2_-_Larrys_Blues_in_Blue.pdf
-    rewrite /donut-county-lazy-river             /pdf/Donut_County_-_Lazy_River.pdf
-    rewrite /tokyo-police-club-bambi             /pdf/Tokyo_Police_Club_-_Bambi.pdf
-    rewrite /beastars-many-stories               /pdf/Beastars_-_Many_Stories.pdf
-    rewrite /gonzaguinha-lindo-lago-do-amor      /pdf/Gonzaguinha_-_Lindo_Lago_do_Amor.pdf
 }
