@@ -1,25 +1,25 @@
-log.arbochelli.download {
+log.{$DOMAIN:localhost} {
     reverse_proxy http://localhost:3000
 }
 
-pdf.arbochelli.download {
+pdf.{$DOMAIN:localhost} {
     root * redirect
     file_server
     handle_errors {
-        redir * https://arbochelli.download/?status={http.error.status_code}
+        redir * https://{$DOMAIN:localhost}/?status={http.error.status_code}
     }
 }
 
-localhost arbochelli.download http://basssssxls7b72rf6b2nngxcwhndx6r2k42bcbyx6dkeps7ilh3nwlqd.onion {
+{$DOMAIN:localhost} http://basssssxls7b72rf6b2nngxcwhndx6r2k42bcbyx6dkeps7ilh3nwlqd.onion {
     templates
     encode zstd gzip
     header Onion-Location http://basssssxls7b72rf6b2nngxcwhndx6r2k42bcbyx6dkeps7ilh3nwlqd.onion
 
     rewrite / {uri}?sort=name&order=desc
-    redir /p/* https://pdf.arbochelli.download?r={http.request.uri.path.1}
+    redir /p/* https://pdf.{$DOMAIN:localhost}?r={http.request.uri.path.1}
 
     file_server {
-        hide .git* tmp *.html .mscbackup redirect *.sh
+        hide .git* tmp *.html .mscbackup redirect *.sh .vscode *.code-workspace
         browse template.html
     }
 
