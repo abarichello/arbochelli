@@ -1,3 +1,5 @@
+rewrite /template                            /mscz/Template.mscz
+
 rewrite /muse-dash-option-theme              /pdf/Muse_Dash_-_Option_Theme.pdf
 rewrite /sing-yesterday-ep-9                 /pdf/Sing_Yesterday_for_Me_-_Episode_9.pdf
 rewrite /potsu-lookin-up                     /pdf/potsu_-_lookin_up.pdf
@@ -8,3 +10,4 @@ rewrite /donut-county-lazy-river             /pdf/Donut_County_-_Lazy_River.pdf
 rewrite /tokyo-police-club-bambi             /pdf/Tokyo_Police_Club_-_Bambi.pdf
 rewrite /beastars-many-stories               /pdf/Beastars_-_Many_Stories.pdf
 rewrite /gonzaguinha-lindo-lago-do-amor      /pdf/Gonzaguinha_-_Lindo_Lago_do_Amor.pdf
+
