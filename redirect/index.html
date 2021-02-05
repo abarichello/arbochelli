@@ -12,19 +12,47 @@
   <h3 id="text">Redirecting...</h3>
 
   <script>
-    window.onload = () => {
+    window.onload = async () => {
       const urlParams = new URLSearchParams(window.location.search);
-
       const redir = urlParams.get("r");
       if (urlParams.has("r") && redir !== "") {
-        umami.trackView(redir)
         document.getElementById('text').textContent = `Redirecting to ${redir}...`;
-        setTimeout(() => {
-          window.location = "https://arbochelli.download/" + redir
-        }, 777);
+        await umami(redir);
+        window.location = "https://arbochelli.download/" + redir;
       } else {
         document.getElementById('text').textContent = "No redirect";
       }
+    }
+
+    async function umami(redir) {
+      const {
+        screen: { width, height },
+        navigator: { language },
+        location: { hostname },
+        document: { referrer },
+      } = window;
+      const screen = `${width}x${height}`;
+
+      return fetch("https://log.arbochelli.download/api/collect", {
+        method: "POST",
+        mode: "cors",
+        credentials: "omit",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          type: "pageview",
+          payload: {
+            cache: null,
+            website: "b485bc74-881e-4f53-a0e6-5ae113ff8e6e",
+            hostname,
+            screen,
+            language,
+            referrer,
+            url: redir,
+          },
+        }),
+      });
     }
   </script>
 </body>
