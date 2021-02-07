@@ -1,4 +1,5 @@
 log.{$DOMAIN:localhost} {
+    encode zstd gzip
     reverse_proxy http://localhost:3000
 }
 
@@ -20,9 +21,11 @@ pdf.{$DOMAIN:localhost} {
     redir /p/* https://pdf.{$DOMAIN:localhost}?r={http.request.uri.path.1}
 
     file_server {
-        hide .git* tmp *.html .mscbackup redirect *.sh .vscode *.code-workspace
+        hide .git* tmp *.html .mscbackup redirect static *.sh .vscode *.code-workspace
         browse template.html
     }
+
+    file_server /static/*
 
     handle_errors {
         respond "{http.error.status_code} {http.error.status_text}"
