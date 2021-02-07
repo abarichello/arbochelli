@@ -1,31 +1,34 @@
 log.{$DOMAIN:localhost} {
-    encode zstd gzip
     reverse_proxy http://localhost:3000
 }
 
-pdf.{$DOMAIN:localhost} {
+r.{$DOMAIN:localhost} {
     root * redirect
-    file_server
+    file_server {
+        index redirect.html
+    }
     handle_errors {
         respond "{http.error.status_code} {http.error.status_text}"
     }
 }
 
-{$DOMAIN:localhost} http://basssssxls7b72rf6b2nngxcwhndx6r2k42bcbyx6dkeps7ilh3nwlqd.onion {
+{$DOMAIN:localhost} {$ONION_ADDR} {
     templates
     encode zstd gzip
-    header Onion-Location http://basssssxls7b72rf6b2nngxcwhndx6r2k42bcbyx6dkeps7ilh3nwlqd.onion
+    header Onion-Location {$ONION_ADDR}
 
     import redirect/rewrite.txt
     rewrite / {uri}?sort=name&order=desc
-    redir /p/* https://pdf.{$DOMAIN:localhost}?r={http.request.uri.path.1}
+    redir /p/* https://r.{$DOMAIN:localhost}/?r={http.request.uri.path.1}
 
     file_server {
         hide .git* tmp *.html .mscbackup redirect static *.sh .vscode *.code-workspace
         browse template.html
     }
 
-    file_server /static/*
+    file_server /static/* {
+        browse template.html
+    }
 
     handle_errors {
         respond "{http.error.status_code} {http.error.status_text}"
