@@ -2,6 +2,10 @@ log.{$DOMAIN:localhost} {
     reverse_proxy http://localhost:3000
 }
 
+arbochelli.download {
+    redir https://arbochelli.me{uri}
+}
+
 r.{$DOMAIN:localhost} {
     root * redirect
     file_server {
