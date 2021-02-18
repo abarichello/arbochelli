@@ -4,7 +4,7 @@
 <head>
   <title>Arbochelli Sheet Music</title>
   <meta charset="utf-8">
-  <script async defer data-website-id="b485bc74-881e-4f53-a0e6-5ae113ff8e6e" data-domains="arbochelli.download" src="https://log.arbochelli.download/umami.js"></script>
+  <script async defer data-website-id="b485bc74-881e-4f53-a0e6-5ae113ff8e6e" data-domains="arbochelli.me" src="https://log.arbochelli.me/umami.js"></script>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         if (!window.location.host.includes("localhost")) {
           await umami(redir);
         }
-        window.location = "https://arbochelli.download/" + redir;
+        window.location = "https://arbochelli.me/" + redir;
       } else {
         document.getElementById('text').textContent = "No redirect";
       }
@@ -35,7 +35,7 @@
       } = window;
       const screen = `${width}x${height}`;
 
-      return fetch("https://log.arbochelli.download/api/collect", {
+      return fetch("https://log.arbochelli.me/api/collect", {
         method: "POST",
         mode: "cors",
         credentials: "omit",
