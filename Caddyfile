@@ -22,7 +22,6 @@ r.{$DOMAIN:localhost} {
     header Onion-Location {$ONION_ADDR}
 
     import redirect/rewrite.txt
-    rewrite / {uri}?sort=name&order=desc
     redir /p/* https://r.{$DOMAIN:localhost}/?r={http.request.uri.path.1}
 
     file_server {
