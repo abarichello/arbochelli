@@ -2,8 +2,8 @@ log.{$DOMAIN:localhost} {
     reverse_proxy http://localhost:3000
 }
 
-arbochelli.download {
-    redir https://arbochelli.me{uri}
+arbochelli.download www.{$DOMAIN:localhost} {
+    redir https://{$DOMAIN:localhost}{uri}
 }
 
 r.{$DOMAIN:localhost} {
