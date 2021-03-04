@@ -25,7 +25,7 @@ r.{$DOMAIN:localhost} {
     redir /p/* https://r.{$DOMAIN:localhost}/?r={http.request.uri.path.1}
 
     file_server {
-        hide .git* .mscbackup .vscode *.html *.sh *.code-workspace redirect src static tmp README.md
+        hide .git* .mscbackup .vscode *.html *.sh *.code-workspace README.md redirect src static tmp
         browse template.html
     }
 
