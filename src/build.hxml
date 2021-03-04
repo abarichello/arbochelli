@@ -1,0 +1,4 @@
+-cp src
+-js static/haxe.js
+-main src.Main
+--macro nullSafety("src", Strict)
