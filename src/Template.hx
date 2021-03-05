@@ -1,12 +1,9 @@
-// Functions included in the original caddy JS file
 package src;
 
 import js.Syntax;
 import js.Browser;
 import js.html.URL;
 import js.Browser.document;
-
-// My defined functions
 
 function replaceDash() {
     var elements = document.querySelectorAll("span.name");

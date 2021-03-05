@@ -4,6 +4,7 @@
 <head>
   <title>Arbochelli Sheet Music</title>
   <meta charset="utf-8">
+  <link rel="icon" href="/static/favicon.png">
   <script async defer data-website-id="b485bc74-881e-4f53-a0e6-5ae113ff8e6e" data-domains="arbochelli.me" src="https://log.arbochelli.me/umami.js"></script>
 </head>
 
@@ -11,52 +12,7 @@
 
   <h3 id="text">Redirecting...</h3>
 
-  <script>
-    window.onload = async () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const redir = urlParams.get("r");
-      if (urlParams.has("r") && redir !== "") {
-        document.getElementById('text').textContent = `Redirecting to ${redir}...`;
-        if (!window.location.host.includes("localhost")) {
-          await umami(redir);
-        }
-        window.location = "https://arbochelli.me/" + redir;
-      } else {
-        document.getElementById('text').textContent = "No redirect";
-      }
-    }
-
-    async function umami(redir) {
-      const {
-        screen: { width, height },
-        navigator: { language },
-        location: { hostname },
-        document: { referrer },
-      } = window;
-      const screen = `${width}x${height}`;
-
-      return fetch("https://log.arbochelli.me/api/collect", {
-        method: "POST",
-        mode: "cors",
-        credentials: "omit",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          type: "pageview",
-          payload: {
-            cache: null,
-            website: "b485bc74-881e-4f53-a0e6-5ae113ff8e6e",
-            hostname,
-            screen,
-            language,
-            referrer,
-            url: redir,
-          },
-        }),
-      });
-    }
-  </script>
+  <script src="/static/redirect.js"></script>
 </body>
 
 </html>
