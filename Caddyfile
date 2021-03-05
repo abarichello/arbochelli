@@ -23,6 +23,7 @@ r.{$DOMAIN:localhost} {
     header Onion-Location {$ONION_ADDR}
 
     import redirect/rewrite.txt
+    redir /favicon.ico /static/favicon.png
     redir /p/* https://r.{$DOMAIN:localhost}/?r={http.request.uri.path.1}
 
     file_server {
