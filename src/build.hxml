@@ -2,3 +2,9 @@
 -js static/haxe.js
 -main src.Main
 --macro nullSafety("src", Strict)
+
+--next
+-cp src.redirect
+-js static/redirect.js
+--main src.redirect.Redirect
+--macro nullSafety("src", Strict)

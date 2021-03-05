@@ -8,6 +8,7 @@ arbochelli.download www.{$DOMAIN:localhost} {
 
 r.{$DOMAIN:localhost} {
     root * redirect
+    redir /static/* https://{$DOMAIN:localhost}{uri}
     file_server {
         index redirect.html
     }
