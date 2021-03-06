@@ -1,8 +1,12 @@
+{
+    email webmaster@arbochelli.me
+}
+
 log.{$DOMAIN:localhost} {
     reverse_proxy http://localhost:3000
 }
 
-arbochelli.download www.{$DOMAIN:localhost} {
+{$DOMAIN2} www.{$DOMAIN:localhost} {
     redir https://{$DOMAIN:localhost}{uri}
 }
 
