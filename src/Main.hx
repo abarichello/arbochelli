@@ -10,4 +10,5 @@ function main() {
     for (t in Browser.document.getElementsByTagName("time")) {
         src.Template.localizeDateTime(t);
     }
+    src.Youtube.getRSSFeed();
 }
