@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="description" content="Sheet music for bass guitar by Arbochelli">
   <meta name="author" content="Artur Barichello">
-  <meta name="keywords" content="bass, guitar, sheet, music">
+  <meta name="keywords" content="bass, guitar, sheet, music, tabs">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/static/favicon.png">
   <link rel="stylesheet" href="/static/template.css">
@@ -68,11 +68,11 @@
     <div class="meta">
       <div id="summary">
         <span class="meta-item"><b>{{.NumDirs}}</b> director{{if eq 1 .NumDirs}}y{{else}}ies{{end}}</span>
-        <span class="meta-item"><b>{{.NumFiles}}</b> file{{if ne 1 .NumFiles}}s{{end}}</span>
+        <span class="meta-item" id="total-text"><b>{{.NumFiles}}</b> file{{if ne 1 .NumFiles}}s{{end}}</span>
         {{- if ne 0 .Limit}}
         <span class="meta-item">(of which only <b>{{.Limit}}</b> are displayed)</span>
         {{- end}}
-        <span class="meta-item"><input type="text" placeholder="filter" id="filter" onkeyup='filter()'></span>
+        <span class="meta-item"><input type="text" placeholder="search" id="filter" onkeyup='filter()'></span>
       </div>
     </div>
     <div class="listing">
@@ -180,6 +180,9 @@
           {{- end}}
         </tbody>
       </table>
+    </div>
+    <div class="meta">
+      <span class="meta-item" id="recent-videos">Loading recent videos...</span>
     </div>
   </main>
   <footer>

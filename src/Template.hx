@@ -8,7 +8,7 @@ import js.Browser.document;
 function replaceDash() {
     var elements = document.querySelectorAll("span.name");
     for (el in elements) {
-        el.textContent = el.textContent.split("_").join(" ");
+        el.textContent = StringTools.replace(el.textContent, "_", " ");
     }
 }
 
