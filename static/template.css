@@ -25,10 +25,6 @@ html:root>body>*>*>*>*:not(input):not([onclick])>div:not(:empty):not([id]) {
     background: none #1c1c1c
 }
 
-summary, details {
-    background-color: inherit;
-}
-
 mark, code, pre, blockquote, [class*="quote"], td[style*="inset"][class="alt2"] {
     background-color: #00090F;
 }
@@ -42,27 +38,6 @@ h1, h2, h3, h4, h5, h6 {
 h2 a:visited, h3 a:visited {
     color: #DFDFDF;
     background-color: #363037;
-}
-
-dt {
-    background-color: #2B3135;
-}
-
-dl, dd {
-    background-color: #232323;
-}
-
-li, ul {
-    background-color: inherit;
-}
-
-li a:not([class*="icon"]):not([id*="icon"]):not([onclick]), dt a:not([class*="icon"]):not([id*="icon"]):not([onclick]) {
-    background-image: none;
-    text-indent: 0;
-}
-
-li[class*="item"] a:hover, li[class*="item"]:hover, [class*="menuitem"]:hover {
-    background-color: #2E2B2F;
 }
 
 table {
@@ -94,50 +69,12 @@ html body input:not([type="image"]), button, html body textarea {
     opacity: 1;
 }
 
-html body input[type="checkbox"] {
-    -moz-appearance: checkbox;
-    -webkit-appearance: checkbox;
-}
-
-html body input[type="radio"] {
-    -moz-appearance: radio;
-    -webkit-appearance: radio;
-}
-
-html:root input[type="button"], html:root input[type="submit"], html:root input[type="reset"], html:root button {
-    color: #EEE;
-    background-color: #222437;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), inset 0 10px rgba(255, 255, 255, 0.1), inset 0 10px 20px rgba(255, 255, 255, 0.15), inset 0 -15px 30px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), inset 0 10px rgba(255, 255, 255, 0.1), inset 0 10px 20px rgba(255, 255, 255, 0.15), inset 0 -15px 30px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), inset 0 10px rgba(255, 255, 255, 0.1), inset 0 10px 20px rgba(255, 255, 255, 0.15), inset 0 -15px 30px rgba(0, 0, 0, 0.2);
-}
-
-html:root input[type="button"]:hover, html:root input[type="submit"]:hover, html:root input[type="reset"]:hover, html:root button:hover {
-    color: #FFF;
-    background-color: #31344F;
-    border-color: #5F687F;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
-}
-
 html:root input[type="image"] {
     opacity: .85;
 }
 
 html:root input[type="image"]:hover {
     opacity: .95;
-}
-
-select, option, optgroup {
-    background: none #383838;
-    border-color: #555;
-    color: #f1f1f1;
-    -moz-appearance: none;
-}
-
-address {
-    background: none #333;
 }
 
 hr {
@@ -388,7 +325,7 @@ td .name, td .goup {
 
 footer {
     background: none #141414;
-    padding: 40px 20px;
+    padding: 20px 20px;
     font-size: 12px;
     text-align: center;
 }
