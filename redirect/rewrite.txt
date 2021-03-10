@@ -4,7 +4,7 @@ rewrite /mscz/                               {uri}?sort=time&order=desc
 rewrite /mp3/musescore/                      {uri}?sort=time&order=desc
 
 rewrite /template                            /mscz/Template.mscz
-rewrite /update                              /static/update.txt
+rewrite /status                              /static/status.html
 
 rewrite /muse-dash-option-theme              /pdf/Muse_Dash_-_Option_Theme.pdf
 rewrite /sing-yesterday-ep-9                 /pdf/Sing_Yesterday_for_Me_-_Episode_9.pdf
