@@ -1,9 +1,9 @@
 package src;
 
-import js.html.SpanElement;
 import haxe.xml.Parser;
 import haxe.xml.Access;
 import haxe.http.HttpJs;
+import js.html.SpanElement;
 import js.lib.Date;
 import js.Browser.location;
 import js.Browser.document;
