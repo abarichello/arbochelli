@@ -25,8 +25,9 @@ r.{$DOMAIN:localhost} {
 
 {$DOMAIN:localhost} {$ONION_ADDR} {
     templates
-    encode zstd gzip
+    encode gzip
     header Onion-Location {$ONION_ADDR}
+    try_files {path}.html {path}
 
     import redirect/rewrite.txt
     redir /favicon.ico /static/favicon.png
