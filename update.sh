@@ -9,7 +9,7 @@ ONION_ADDR=http://basssssxls7b72rf6b2nngxcwhndx6r2k42bcbyx6dkeps7ilh3nwlqd.onion
 caddy reload && \
 curl 'https://www.youtube.com/feeds/videos.xml?channel_id=UCQyPHw4V7du8Fx-o12_fudw' > static/yt-rss.xml && \
 
-printf "Info|Value\n-|-\nLast updated|%s\nLast commit|%s\nRepo size|%s\nDisk size|%s" \
+printf "Info|Value\n-|-\n**Last updated**|%s\n**Last commit**|%s\n**Repo size**|%s\n**Disk size**|%s" \
     "$(date -u +"%d-%m-%Y %H:%M:%S %Z")" \
     "$(git log --format=reference --no-decorate -n1)" \
     "$(git count-objects -vH | awk '{if (NR==5) print $2$3}')" \

@@ -18,3 +18,4 @@ rewrite /beastars-many-stories               /pdf/Beastars_-_Many_Stories.pdf
 rewrite /gonzaguinha-lindo-lago-do-amor      /pdf/Gonzaguinha_-_Lindo_Lago_do_Amor.pdf
 rewrite /seyer-ring-around-the-rosie         /pdf/Michael_Seyer_-_Ring_Around_the_Rosie.pdf
 rewrite /tf2-it-hates-me-so-much             /pdf/Team_Fortress_2_-_It_Hates_Me_So_Much.pdf
+rewrite /tf2-seduce-me                       /pdf/Team_Fortess_2_-_Seduce_Me!.pdf
