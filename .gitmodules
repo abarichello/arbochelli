@@ -1,0 +1,3 @@
+[submodule "blog/themes/solar"]
+	path = blog/themes/solar
+	url = https://github.com/aBARICHELLO/solar-theme-hexo

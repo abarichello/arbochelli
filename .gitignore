@@ -1,9 +1,12 @@
-*.md
+# Generated files
 static/*.html
 *.xml
-*.js*
+haxe.js
+redirect.js
+status.md
+*.js.map
+
 tmp
 .mscbackup
 *code-*
 .vscode
-update.txt
