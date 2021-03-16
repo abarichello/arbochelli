@@ -163,7 +163,7 @@
             {{- else}}
             <td data-order="{{.Size}}">{{.HumanSize}}</td>
             {{- end}}
-            <td class="hideable"><time datetime="{{.HumanModTime " 2006-01-02T15:04:05Z"}}">{{.HumanModTime "01/02/2006 03:04:05 PM -07:00"}}</time></td>
+            <td class="hideable"><time datetime='{{.HumanModTime "2006-01-02T15:04:05Z"}}'>{{.HumanModTime "01/02/2006 03:04:05 PM -07:00"}}</time></td>
             <td class="hideable"></td>
           </tr>
           {{- end}}
@@ -176,10 +176,10 @@
   </main>
   <footer>
     <b>Tip $5 here to help host this website:</b><br>
-    <form action=" https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick" />
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
       <input type="hidden" name="hosted_button_id" value="EEB9NWZM7MLPL" />
-      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
     </form>
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="arbochelli" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FFDD00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
     <hr>
