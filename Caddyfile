@@ -33,8 +33,13 @@ r.{$DOMAIN:localhost} {
     redir /favicon.ico /static/favicon.png
     redir /p/* https://r.{$DOMAIN:localhost}/?r={http.request.uri.path.1}
 
+    handle_path /blog/* {
+        rewrite * /blog/public{path}
+        file_server
+    }
+
     file_server {
-        hide .git* .mscbackup .vscode *.html *.sh *.code-workspace README.md redirect src static tmp
+        hide .git* .mscbackup .vscode *.html *.sh *.code-workspace README.md redirect src static tmp blog
         browse template.html
     }
 
@@ -47,6 +52,7 @@ r.{$DOMAIN:localhost} {
     }
 
     log {
+        level DEBUG
         format json
         output file /tmp/arbochelli.log {
             roll_size 200mb
