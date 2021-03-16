@@ -2,6 +2,7 @@
 
 git pull -r origin master && \
 haxe src/build.hxml && \
+# todo: build hexo
 
 DOMAIN=arbochelli.me \
 DOMAIN2=arbochelli.download \
