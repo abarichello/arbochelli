@@ -1,8 +1,9 @@
 #!/bin/bash
 
 git pull -r origin master && \
+git submodule update --recursive && \
 haxe src/build.hxml && \
-# todo: build hexo
+hexo generate --cwd blog && \
 
 DOMAIN=arbochelli.me \
 DOMAIN2=arbochelli.download \
