@@ -3,6 +3,7 @@
 git pull -r origin master && \
 git submodule update --recursive && \
 haxe src/build.hxml && \
+rm -rf blog/public/css && \
 hexo generate --cwd blog && \
 
 DOMAIN=arbochelli.me \
@@ -16,5 +17,4 @@ printf "Info|Value\n-|-\n**Last updated**|%s\n**Last commit**|%s\n**Repo size**|
     "$(git log --format=reference --no-decorate -n1)" \
     "$(git count-objects -vH | awk '{if (NR==5) print $2$3}')" \
     "$(du -sh . | awk '{print $1}')" \
-    > static/status.md && \
-    pandoc -s static/status.md -c static/template.css --metadata title="status" -o static/status.html
+    > static/status.md
