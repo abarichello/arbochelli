@@ -1,9 +1,11 @@
 ---
-title:
-date:
+title: Hello World
+date: 2021-03-16
 comments: true
 categories:
-- random
+  - random
+tags:
+  - test
 ---
 
 # Hello World
