@@ -3,6 +3,7 @@ title: {{ title }}
 comments: true
 categories:
   - sheet-music
+  - game anime brazil indie
 tags:
   - bass
   - sheet
@@ -11,13 +12,9 @@ date: {{ date }}
 
 # Intro
 Bass guitar tab/sheet music for {{ title }}.
-Played during the game's options menu.
 
 ## Video
 {% youtube ZB3IVzxGaqU %}
 
 ## PDF
 {% pdf https://arbochelli.me/muse-dash-option-theme %}
-
-### Links:
-{% link "MuseScore" https://musescore.org/arbochelli/ %}
