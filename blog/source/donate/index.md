@@ -1,6 +1,6 @@
 # Donate
 
-## **Paypal**
+## Paypal
 
 <form action="https://www.paypal.com/donate" method="post" target="_top">
     <input type="hidden" name="hosted_button_id" value="EEB9NWZM7MLPL" />
@@ -8,10 +8,10 @@
     <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
 </form>
 
-## **Buy me a coffe**
+## Buy me a coffee
 <a href="https://www.buymeacoffee.com/arbochelli"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=💻&slug=arbochelli&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff"></a>
 
-## ** PIX (🇧🇷):**
+## PIX (🇧🇷):
 <img src="/static/contact.png"></a><br>
 
 <img title="My signature" src="/static/signature.png"></img>
