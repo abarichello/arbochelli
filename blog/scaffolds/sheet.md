@@ -3,7 +3,8 @@ title: {{ title }}
 date: {{ date }}
 comments: true
 categories:
-- sheet-music
+  - sheet-music
 tags:
-- bass
+  - bass
+  - sheet
 ---
