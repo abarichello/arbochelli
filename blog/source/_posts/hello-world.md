@@ -1,38 +1,21 @@
 ---
-title: Hello World
+title:
+date:
+comments: true
+categories:
+- random
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+# Hello World
 
-### Create a new post
+## Introduction
 
-``` bash
-$ hexo new "My New Post"
-```
+I made this website to host the sheet music that I create for free.
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+## Tech
 
-### Run server
+### Main website
+The main website uses the [Caddy](https://caddyserver.com/) `file_server` directive with a custom template to serve the PDF, mscz and mp3 files. The JavaScript is generated using the [Haxe](https://haxe.org) language so I can use the statically typed Browser API together with other Haxe features.
 
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+### Blog website
+The blog portion of the website is created using [Hexo](https://hexo.io/) as the static site generator together with the [Solar theme](https://github.com/tzvetkov75/solar-theme-hexo) as a template.

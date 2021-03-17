@@ -34,6 +34,8 @@ r.{$DOMAIN:localhost} {
     redir /p/* https://r.{$DOMAIN:localhost}/?r={http.request.uri.path.1}
 
     handle_path /blog/* {
+        redir /static/* https://{$DOMAIN:localhost}{path}
+        rewrite / /blog/public/home/
         rewrite * /blog/public{path}
         file_server
     }
