@@ -37,12 +37,12 @@ skip_render:
 # Writing
 new_post_name: :title.md
 default_layout: post
-titlecase: 1
+titlecase: true
 external_link:
   enable: true
   field: site
   exclude: ''
-filename_case: 0
+filename_case: 1
 render_drafts: false
 post_asset_folder: false
 relative_link: false
