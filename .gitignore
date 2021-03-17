@@ -1,5 +1,6 @@
 # Generated files
-*.xml
+.comments
+yt-rss.xml
 haxe.js
 redirect.js
 status.md

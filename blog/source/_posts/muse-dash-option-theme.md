@@ -3,6 +3,7 @@ title: Muse Dash - Option Theme
 comments: true
 categories:
   - sheet-music
+  - game
 tags:
   - bass
   - sheet
@@ -18,6 +19,3 @@ Played during the game's options menu.
 
 ## PDF
 {% pdf https://arbochelli.me/muse-dash-option-theme %}
-
-### Links
-{% link "MuseScore" https://musescore.org/arbochelli/ %}
