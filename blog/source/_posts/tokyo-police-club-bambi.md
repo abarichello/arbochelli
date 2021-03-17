@@ -4,7 +4,6 @@ comments: true
 categories:
   - sheet-music
   - anime
-  - indie
 tags:
   - bass
   - sheet
