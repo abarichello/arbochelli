@@ -2,8 +2,8 @@
 title: potsu - lookin up
 comments: true
 categories:
-  - sheet-music
-  - indie
+  - [sheet-music]
+  - [indie]
 tags:
   - bass
   - sheet

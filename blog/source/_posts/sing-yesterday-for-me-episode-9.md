@@ -2,8 +2,8 @@
 title: Sing Yesterday For Me - Episode 9
 comments: true
 categories:
-  - sheet-music
-  - anime
+  - [sheet-music]
+  - [anime]
 tags:
   - bass
   - sheet

@@ -2,8 +2,8 @@
 title: Perfect World - City B1(Archosaur)
 comments: true
 categories:
-  - sheet-music
-  - game
+  - [sheet-music]
+  - [game]
 tags:
   - bass
   - sheet

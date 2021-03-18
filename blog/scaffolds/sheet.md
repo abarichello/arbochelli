@@ -2,8 +2,8 @@
 title: {{ title }}
 comments: true
 categories:
-  - sheet-music
-  - $tag
+  - [sheet-music]
+  - [$tag]
 tags:
   - bass
   - sheet
