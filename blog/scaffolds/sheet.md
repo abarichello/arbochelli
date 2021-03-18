@@ -3,18 +3,22 @@ title: {{ title }}
 comments: true
 categories:
   - sheet-music
-  - game anime brazil indie
+  - $tag
 tags:
   - bass
   - sheet
 date: {{ date }}
 ---
 
+<!-- All elements with a $ prefix get replaced by haxe Ghostwriter.hx -->
+
 # Intro
-Bass guitar tab/sheet music for {{ title }}.
+Bass guitar tab/sheet music for $title.
+
+$notes
 
 ## Video
-{% youtube ZB3IVzxGaqU %}
+{% youtube $youtube %}
 
 ## PDF
-{% pdf https://arbochelli.me/muse-dash-option-theme %}
+{% pdf $pdf %}

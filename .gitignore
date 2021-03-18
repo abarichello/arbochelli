@@ -1,11 +1,14 @@
 # Generated files
-.comments
 yt-rss.xml
 haxe.js
 redirect.js
 status.md
 *.js.map
+static/ghostwriter/
+Ghostwriter*
+artist-test.md
 
+.comments
 tmp
 .mscbackup
 *code-*
