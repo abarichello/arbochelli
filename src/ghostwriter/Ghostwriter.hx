@@ -1,4 +1,5 @@
-// Generate a blog post from a XML file, should be run from the root folder
+// Generate a blog post from the Youtube RSS XML file.
+// Execute at the root folder.
 package src.ghostwriter;
 
 import sys.io.File;
@@ -33,8 +34,7 @@ inline function getFeedFilename(feed: Access) {
 function readRSSFeed(): Access {
     var feed = File.getContent("./static/" + rssFilename);
     var xml = Parser.parse(feed);
-    var lastEntry = new Access(xml.firstElement()).nodes.entry[0];
-    return lastEntry;
+    return new Access(xml.firstElement()).nodes.entry[0];
 }
 
 function shouldPost(lastEntry: Access): Bool {
