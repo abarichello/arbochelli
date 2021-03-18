@@ -5,7 +5,8 @@ redirect.js
 status.md
 *.js.map
 static/ghostwriter/
-Ghostwriter*
+Ghostwriter
+Ghostwriter-debug
 artist-test.md
 
 .comments

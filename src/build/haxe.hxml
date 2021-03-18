@@ -1,4 +1,4 @@
 -cp src.ghostwriter
---cpp static/ghostwriter
+--interp
 --main src.ghostwriter.Ghostwriter
 --macro nullSafety("src", Strict)
