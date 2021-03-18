@@ -2,8 +2,8 @@
 title: Muse Dash - Option Theme
 comments: true
 categories:
-  - sheet-music
-  - game
+  - [sheet-music]
+  - [game]
 tags:
   - bass
   - sheet

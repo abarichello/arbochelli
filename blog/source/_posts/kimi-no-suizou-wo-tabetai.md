@@ -2,8 +2,8 @@
 title: Kimi no Suizou wo Tabetai
 comments: true
 categories:
-  - sheet-music
-  - anime
+  - [sheet-music]
+  - [anime]
 tags:
   - bass
   - sheet

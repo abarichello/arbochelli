@@ -2,8 +2,8 @@
 title: Beastars - Many Stories
 comments: true
 categories:
-  - sheet-music
-  - anime
+  - [sheet-music]
+  - [anime]
 tags:
   - bass
   - sheet

@@ -2,8 +2,8 @@
 title: Gonzaguinha - Lindo Lago do Amor
 comments: true
 categories:
-  - sheet-music
-  - brazil
+  - [sheet-music]
+  - [brazil]
 tags:
   - bass
   - sheet

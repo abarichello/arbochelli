@@ -2,8 +2,8 @@
 title: Tokyo Police Club - Bambi
 comments: true
 categories:
-  - sheet-music
-  - anime
+  - [sheet-music]
+  - [anime]
 tags:
   - bass
   - sheet
