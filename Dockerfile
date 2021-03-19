@@ -16,19 +16,19 @@ WORKDIR /arbochelli/blog
 
 RUN yarn && \
     yarn global add hexo-cli && \
-    rm -rf /public/css && \
+    rm -rf public/css && \
     hexo generate && \
     printf "Info|Value\n-|-\n**Last updated**|%s\n**Last commit**|%s\n**Repo size**|%s\n**Disk size**|%s\n**Total posts**|%s" \
     "$(date -u +"%d-%m-%Y %H:%M:%S %Z")" \
     "$(git log --format=reference --no-decorate -n1)" \
     "$(git count-objects -vH | awk '{if (NR==5) print $2$3}')" \
     "$(du -sh . | awk '{print $1}')" \
-    "$(ls -f blog/source/_posts/ | wc -l)" \
+    "$(ls -f source/_posts/ | wc -l)" \
     > ../static/status.md
 
 FROM caddy:2.3.0-alpine as caddy
 
-COPY --from=haxe /arbochelli /arbochelli
+COPY --from=node /arbochelli /arbochelli
 WORKDIR /arbochelli/
 
 CMD ["caddy", "run"]
