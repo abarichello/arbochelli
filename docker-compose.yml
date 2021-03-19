@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  updater:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DOMAIN: ${DOMAIN:-localhost}
+      DOMAIN2: ${DOMAIN2}
+      ONION_ADDR: ${ONION_ADDR}
+    volumes:
+      - .:/srv
+      - .:/etc/caddy
+      - ~/.local/share/caddy:/data
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"

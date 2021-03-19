@@ -41,7 +41,7 @@ r.{$DOMAIN:localhost} {
     }
 
     file_server {
-        hide .git* .mscbackup .vscode *.html *.sh *.code-workspace README.md redirect src static tmp
+        hide .git* .mscbackup .vscode *.html *.sh *.code-workspace README.md redirect src static tmp .env *ocker* *.lock *.yml Caddyfile site
         browse template.html
     }
 
