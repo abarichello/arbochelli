@@ -8,3 +8,9 @@
 -js static/redirect.js
 --main src.redirect.Redirect
 --macro nullSafety("src", Strict)
+
+--next
+-cp blog.themes.solar.source.hx
+-js blog/themes/solar/source/hx/main.js
+-main blog.themes.solar.source.hx.Main
+--macro nullSafety("src", Strict)
