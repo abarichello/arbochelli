@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.formatOnSave": true,
+		"haxe.configurations": [
+			[
+				"src/build/js.hxml",
+			],
+			[
+				"src/build/haxe.hxml",
+			]
+		],
+		"haxe.diagnosticsPathFilter": "${workspaceRoot}"
+	}
+}
