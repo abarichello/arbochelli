@@ -1,6 +1,3 @@
-// Generate a blog post from the Youtube RSS XML file.
-// Execute at the root folder.
-//
 package src.ghostwriter;
 
 import sys.io.File;
@@ -8,7 +5,6 @@ import sys.FileSystem;
 import haxe.xml.Parser;
 import haxe.xml.Access;
 import src.ghostwriter.Utils;
-import src.ghostwriter.Status;
 
 using StringTools;
 
@@ -79,7 +75,7 @@ function templatePost(title: String, replaceMap: Map<String, String>) {
     trace("Saved templated contents");
 }
 
-function main() {
+function ghostwrite() {
     var lastEntry = readRSSFeed();
     if (shouldPost(lastEntry)) {
         var filename = getFeedFilename(lastEntry);
@@ -89,6 +85,9 @@ function main() {
         var map = createReplaceMap(lastEntry);
         templatePost(filename, map);
     }
+}
 
-    generateStatusFile();
+function main() {
+    ghostwrite();
+    Status.generateStatusFile();
 }
