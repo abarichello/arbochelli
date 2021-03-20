@@ -1,5 +1,4 @@
 {
-    # debug
     # local_certs
     email webmaster@arbochelli.me
 }
@@ -27,26 +26,29 @@ r.{$DOMAIN:localhost} {
     templates
     encode gzip
     header Onion-Location {$ONION_ADDR}
-    try_files {path}.html {path}
 
     import redirect/rewrite.txt
-    redir /favicon.ico /static/favicon.png
     redir /p/* https://r.{$DOMAIN:localhost}/?r={http.request.uri.path.1}
+
+    try_files {path}.html {path}
+    try_files {path}.ico /static/{path}
+
+    file_server {
+        hide .git* .mscbackup .vscode *.html *.sh *.code-workspace README.md redirect src static status tmp .env *ocker* *.lock *.yml Caddyfile site
+        browse template.html
+    }
+    file_server /status/* {
+        index status.html
+    }
+    file_server /static/* {
+        browse template.html
+    }
 
     handle_path /blog/* {
         redir /static/* https://{$DOMAIN:localhost}{path}
         rewrite / /blog/public/home/
         rewrite * /blog/public{path}
         file_server
-    }
-
-    file_server {
-        hide .git* .mscbackup .vscode *.html *.sh *.code-workspace README.md redirect src static tmp .env *ocker* *.lock *.yml Caddyfile site
-        browse template.html
-    }
-
-    file_server /static/* {
-        browse template.html
     }
 
     handle_errors {

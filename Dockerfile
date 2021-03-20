@@ -21,14 +21,7 @@ WORKDIR /arbochelli/blog
 RUN yarn && \
     rm -rf public/css && \
     hexo generate && \
-    git add source/_posts/ && (git commit -m 'Publish new post' || true) && git push token master && \
-    printf "Info|Value\n-|-\n**Last updated**|%s\n**Last commit**|%s\n**Repo size**|%s\n**Disk size**|%s\n**Total posts**|%s" \
-    "$(date -u +'%d-%m-%Y %H:%M:%S %Z')" \
-    "$(git log --format=short --no-decorate -n1 --oneline)" \
-    "$(git count-objects -vH | awk '{if (NR==5) print $2$3}')" \
-    "$(du -sh . | awk '{print $1}')" \
-    "$(ls -1 source/_posts/ | wc -l)" \
-    > ../static/status.md
+    git add source/_posts/ && (git commit -m 'Publish new post' || true) && git push token master
 
 FROM caddy:2.3.0-alpine as caddy
 
