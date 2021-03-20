@@ -5,10 +5,10 @@ package src.ghostwriter;
 
 import sys.io.File;
 import sys.FileSystem;
-import haxe.io.Path;
 import haxe.xml.Parser;
 import haxe.xml.Access;
 import src.ghostwriter.Utils;
+import src.ghostwriter.Status;
 
 using StringTools;
 
@@ -72,9 +72,8 @@ function templatePost(title: String, replaceMap: Map<String, String>) {
     var path = "./blog/source/_posts/" + title + ".md";
     var content = File.getContent(path);
     var iter = replaceMap.keyValueIterator();
-    while (iter.hasNext()) {
-        var current = iter.next();
-        content = content.replace(current.key, current.value);
+    for (key => value in iter) {
+        content = content.replace(key, value);
     }
     File.saveContent(path, content);
     trace("Saved templated contents");
@@ -90,4 +89,6 @@ function main() {
         var map = createReplaceMap(lastEntry);
         templatePost(filename, map);
     }
+
+    generateStatusFile();
 }
