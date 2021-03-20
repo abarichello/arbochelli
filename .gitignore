@@ -4,11 +4,9 @@ haxe.js
 redirect.js
 status.md
 *.js.map
-static/ghostwriter/
-Ghostwriter
-Ghostwriter-debug
 artist-test.md
 
+# Misc
 .comments
 tmp
 .mscbackup
