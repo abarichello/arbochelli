@@ -1,5 +1,6 @@
 // Generate a blog post from the Youtube RSS XML file.
 // Execute at the root folder.
+//
 package src.ghostwriter;
 
 import sys.io.File;
@@ -7,29 +8,9 @@ import sys.FileSystem;
 import haxe.io.Path;
 import haxe.xml.Parser;
 import haxe.xml.Access;
+import src.ghostwriter.Utils;
 
 using StringTools;
-
-#if debug
-var rssFilename = "test-rss.xml";
-#else
-var rssFilename = "yt-rss.xml";
-#end
-
-inline function assert(bool: Bool, str: String) {
-    if (!bool) {
-        trace('Error: ${str}');
-        Sys.exit(-1);
-    }
-}
-
-inline function getFeedRawTitle(feed: Access) {
-    return feed.node.title.innerData.replace(" [Bass Tabs/Sheet]", "");
-}
-
-inline function getFeedFilename(feed: Access) {
-    return getFeedRawTitle(feed).toLowerCase().replace("- ", "").replace(" ", "-");
-}
 
 function readRSSFeed(): Access {
     var feed = File.getContent("./static/" + rssFilename);
