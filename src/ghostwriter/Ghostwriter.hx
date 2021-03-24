@@ -34,6 +34,7 @@ function createPost(title: String) {
 }
 
 function createReplaceMap(lastEntry: Access): Map<String, String> {
+    // TODO: Handle non-matching cases
     var title = getFeedRawTitle(lastEntry);
     var description: String = lastEntry.node.resolve("media:group").node.resolve("media:description").innerData;
 

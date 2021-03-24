@@ -1,5 +1,6 @@
 {
     # local_certs
+    admin off
     email webmaster@arbochelli.me
 }
 
