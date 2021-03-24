@@ -22,5 +22,6 @@ inline function getFeedRawTitle(feed: Access) {
 }
 
 inline function getFeedFilename(feed: Access) {
-    return getFeedRawTitle(feed).toLowerCase().replace("- ", "").replace(" ", "-");
+    // TODO: check how hexo generates these titles
+    return getFeedRawTitle(feed).toLowerCase().replace("- ", "").replace(" ", "-").replace("'", "-");
 }
