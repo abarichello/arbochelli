@@ -9,52 +9,51 @@ import src.ghostwriter.Utils;
 using StringTools;
 
 function readRSSFeed(): Access {
-    var feed = File.getContent("./static/" + rssFilename);
-    var xml = Parser.parse(feed);
+    final feed = File.getContent("./static/" + rssFilename);
+    final xml = Parser.parse(feed);
     return new Access(xml.firstElement()).nodes.entry[0];
 }
 
 function shouldPost(lastEntry: Access): Bool {
     trace("Starting 'should post' check");
-    var filename = getFeedFilename(lastEntry) + ".md";
-    var posts = FileSystem.readDirectory("./blog/source/_posts/");
-    var entryDescription = lastEntry.node.resolve("media:group").node.resolve("media:description").innerData;
+    final filename = getFeedFilename(lastEntry) + ".md";
+    final posts = FileSystem.readDirectory("./blog/source/_posts/");
+    final entryDescription = lastEntry.node.resolve("media:group").node.resolve("media:description").innerData;
 
-    var shouldPost = entryDescription.contains("#bass");
-    var newPost = !posts.contains(filename);
-    var res = shouldPost && newPost;
+    final shouldPost = entryDescription.contains("#bass");
+    final newPost = !posts.contains(filename);
+    final res = shouldPost && newPost;
 
     trace('Decided that ${filename} should ${res ? "" : "not "}be posted');
     return res;
 }
 
 function createPost(title: String) {
-    var res = Sys.command('hexo new sheet "${title}" --cwd blog');
+    final res = Sys.command('hexo new sheet "${title}" --cwd blog');
     assert(res == 0, "Sys command returned non-zero code");
 }
 
 function createReplaceMap(lastEntry: Access): Map<String, String> {
-    // TODO: Handle non-matching cases
-    var title = getFeedRawTitle(lastEntry);
-    var description: String = lastEntry.node.resolve("media:group").node.resolve("media:description").innerData;
+    final title = getFeedRawTitle(lastEntry);
+    final description: String = lastEntry.node.resolve("media:group").node.resolve("media:description").innerData;
 
-    var urlLine = description.split("\n")[0];
-    var pdfRegex = ~/https:\/\/.+/;
+    final urlLine = description.split("\n")[0];
+    final pdfRegex = ~/https:\/\/.+/;
     pdfRegex.match(urlLine);
-    var pdfURL = pdfRegex.matched(0).replace("/p", "");
+    final pdfURL = pdfRegex.matched(0).replace("/p", "");
 
-    var notesRegex = ~/Notes:.+/;
+    final notesRegex = ~/Notes:.+/;
     notesRegex.match(description);
-    var notes = notesRegex.matched(0).replace("Notes: ", "");
+    final notes = notesRegex.matched(0).replace("Notes: ", "");
 
-    var searchTags = [
+    final searchTags = [
         "#anime",
         "#brazil",
         "#game",
         "#indie"
     ];
-    var tag = searchTags.filter((t) -> description.contains(t))[0].substr(1);
-    var youtubeHash = lastEntry.node.resolve("yt:videoId").innerData;
+    final tag = searchTags.filter((t) -> description.contains(t))[0].substr(1);
+    final youtubeHash = lastEntry.node.resolve("yt:videoId").innerData;
 
     return [
         "$title" => title,
@@ -66,9 +65,9 @@ function createReplaceMap(lastEntry: Access): Map<String, String> {
 }
 
 function templatePost(title: String, replaceMap: Map<String, String>) {
-    var path = "./blog/source/_posts/" + title + ".md";
+    final path = "./blog/source/_posts/" + title + ".md";
     var content = File.getContent(path);
-    var iter = replaceMap.keyValueIterator();
+    final iter = replaceMap.keyValueIterator();
     for (key => value in iter) {
         content = content.replace(key, value);
     }
@@ -77,13 +76,13 @@ function templatePost(title: String, replaceMap: Map<String, String>) {
 }
 
 function ghostwrite() {
-    var lastEntry = readRSSFeed();
+    final lastEntry = readRSSFeed();
     if (shouldPost(lastEntry)) {
-        var filename = getFeedFilename(lastEntry);
-        var rawTitle = getFeedRawTitle(lastEntry);
+        final filename = getFeedFilename(lastEntry);
+        final rawTitle = getFeedRawTitle(lastEntry);
         trace("Posting last entry: " + rawTitle);
         createPost(rawTitle);
-        var map = createReplaceMap(lastEntry);
+        final map = createReplaceMap(lastEntry);
         templatePost(filename, map);
     }
 }

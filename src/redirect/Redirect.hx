@@ -7,22 +7,26 @@ import js.Browser.window;
 import js.Browser.location;
 import js.Browser.document;
 
+#if debug
+final log = true;
+#else
+final log = !StringTools.contains(location.host, "localhost");
+#end
+
 function main() {
     window.onload = () -> redirect();
 }
 
 function redirect() {
-    var urlParams = new URLSearchParams(location.search);
-    var redir = urlParams.get("r");
+    final urlParams = new URLSearchParams(location.search);
+    final redir = urlParams.get("r");
     if (redir != "") {
         document.getElementById("text").textContent = 'Redirecting to ${redir}';
-        #if debug
-        var log = true;
-        #else
-        var log = !StringTools.contains(location.host, "localhost");
-        #end
         if (log) {
             umami(redir);
+        } else {
+            trace('Redirecting to ${redir}');
+            window.location.assign(src.Const.DOMAIN_URL + redir);
         }
     } else {
         document.getElementById("text").textContent = "No redirect";
@@ -30,12 +34,12 @@ function redirect() {
 }
 
 function umami(redir: String) {
-    var language = window.navigator.language;
-    var hostname = location.hostname;
-    var referrer = document.referrer;
-    var screen = '${window.screen.width}x${window.screen.height}';
+    final language = window.navigator.language;
+    final hostname = location.hostname;
+    final referrer = document.referrer;
+    final screen = '${window.screen.width}x${window.screen.height}';
 
-    var req = new HttpJs(src.Const.COLLECT_URL);
+    final req = new HttpJs(src.Const.COLLECT_URL);
     req.addHeader("Content-type", "application/json");
     req.onError = function(error: String) {
         throw error;
