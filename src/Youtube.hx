@@ -18,7 +18,7 @@ typedef ParseResults = {
 }
 
 function getRSSFeed() {
-    var req = new HttpJs(src.Const.FEED_URL);
+    final req = new HttpJs(src.Const.FEED_URL);
     req.async = true;
     req.onData = onData;
     req.onError = onError;
@@ -35,9 +35,9 @@ function onData(feed: String) {
 
 function parseFeed(feed: String): ParseResults {
     feed = StringTools.replace(feed, "\n  ", "");
-    var xml = Parser.parse(feed);
-    var entries = new Access(xml.firstElement()).nodes.entry;
-    var videos = [for (i in 0...5)
+    final xml = Parser.parse(feed);
+    final entries = new Access(xml.firstElement()).nodes.entry;
+    final videos = [for (i in 0...5)
         {
             title: StringTools.replace(entries[i].node.title.innerData, " [Bass Tabs/Sheet]", ""),
             link: entries[i].node.link.att.href,
@@ -56,7 +56,7 @@ function updateLatestVideos(results: ParseResults) {
         updateTotalText(results.totalVideos);
     }
 
-    var videosHTML = results.videos.map((video) -> '<a href="${video.link}" title="Published: ${video.published}"><u>${video.title}</u></a>');
+    final videosHTML = results.videos.map((video) -> '<a href="${video.link}" title="Published: ${video.published}"><u>${video.title}</u></a>');
     document.getElementById("recent-videos").innerHTML = '<b>Recent videos: ${videosHTML.join(" | ")}</b>';
 }
 

@@ -6,7 +6,7 @@ import js.html.URL;
 import js.Browser.document;
 
 function replaceDash() {
-    var elements = document.querySelectorAll("span.name");
+    final elements = document.querySelectorAll("span.name");
     for (el in elements) {
         el.textContent = StringTools.replace(el.textContent, "_", " ");
     }
@@ -23,9 +23,9 @@ function getFilterElement() {
 }
 
 function initFilter() {
-    var filterEl = getFilterElement();
+    final filterEl = getFilterElement();
     if (filterEl.itemValue == null) {
-        var filterParam = new URL(Browser.location.href).searchParams.get('filter');
+        final filterParam = new URL(Browser.location.href).searchParams.get('filter');
         if (filterParam != "") {
             filterEl.itemValue = filterParam;
         }

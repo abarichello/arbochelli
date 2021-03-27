@@ -10,12 +10,12 @@ function generateStatusFile() {
         "du -sh . | awk '{print $1}'",
         "ls -1 blog/source/_posts/ | wc -l",
     ];
-    var output = [];
+    final output = [];
     for (cmd in commands) {
-        var process = new sys.io.Process(cmd);
+        final process = new sys.io.Process(cmd);
         output.push(process.stdout.readLine());
     }
-    var markdown = '
+    final markdown = '
 Info|Value
 -|-
 **Last updated**|${output[0]}
