@@ -10,8 +10,8 @@ WORKDIR /arbochelli
 RUN git config pull.ff only \
     && git config user.email "webmaster@arbochelli.me" \
     && git config user.name "Barichello" \
-    && (git pull token master || true) \
-    && (git submodule update --recursive || true) \
+    && git pull token master \
+    && git submodule update --recursive \
     && curl 'https://www.youtube.com/feeds/videos.xml?channel_id=UCQyPHw4V7du8Fx-o12_fudw' > static/yt-rss.xml \
     && haxe src/build/all.hxml
 
@@ -22,7 +22,7 @@ RUN yarn \
     && yarn build \
     && git add source/_posts/ \
     && (git commit -m 'Publish new post' || true) \
-    &&  git push token master
+    && git push token master
 
 FROM caddy:2.3.0-alpine as caddy
 
