@@ -13,6 +13,7 @@ RUN git config pull.ff only \
     && git pull token master \
     && git submodule update --recursive \
     && curl 'https://www.youtube.com/feeds/videos.xml?channel_id=UCQyPHw4V7du8Fx-o12_fudw' > static/yt-rss.xml \
+    && haxelib install src/build/*.hxml --always \
     && haxe src/build/all.hxml
 
 WORKDIR /arbochelli/blog
