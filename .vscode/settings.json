@@ -1,0 +1,6 @@
+{
+    "[haxe]": {
+        "editor.suggestSelection": "first"
+    },
+    "editor.formatOnSave": true
+}
