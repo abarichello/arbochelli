@@ -39,12 +39,10 @@ function createReplaceMap(lastEntry: Access): Map<String, String> {
 
     final urlLine = description.split("\n")[0];
     final pdfRegex = ~/https:\/\/.+/;
-    pdfRegex.match(urlLine);
-    final pdfURL = pdfRegex.matched(0).replace("/p", "");
+    final pdfURL = pdfRegex.match(urlLine) ? pdfRegex.matched(0).replace("/p", "") : "";
 
     final notesRegex = ~/Notes:.+/;
-    notesRegex.match(description);
-    final notes = notesRegex.matched(0).replace("Notes: ", "");
+    final notes = notesRegex.match(description) ? notesRegex.matched(0).replace("Notes: ", "") : "";
 
     final searchTags = [
         "#anime",
