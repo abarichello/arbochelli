@@ -7,11 +7,9 @@ import js.Browser.window;
 import js.Browser.location;
 import js.Browser.document;
 
-#if debug
-final log = true;
-#else
-final log = !StringTools.contains(location.host, "localhost");
-#end
+using StringTools;
+
+final log = !location.host.contains("localhost");
 
 function main() {
     window.onload = () -> redirect();
