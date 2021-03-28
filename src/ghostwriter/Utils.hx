@@ -10,6 +10,16 @@ var rssFilename = "test-rss.xml";
 var rssFilename = "yt-rss.xml";
 #end
 
+final remove = [
+    "- ",
+    ",",
+];
+
+final replace = [
+    " ",
+    "'"
+];
+
 inline function assert(bool: Bool, str: String) {
     if (!bool) {
         trace('Error: ${str}');
@@ -22,11 +32,10 @@ inline function getFeedRawTitle(feed: Access) {
 }
 
 inline function getFeedFilename(feed: Access) {
-    final replace = [
-        " ",
-        "'"
-    ];
-    var title = getFeedRawTitle(feed).toLowerCase().replace("- ", "");
+    var title = getFeedRawTitle(feed).toLowerCase();
+    for (r in remove) {
+        title = title.replace(r, "");
+    }
     for (r in replace) {
         title = title.replace(r, "-");
     }
