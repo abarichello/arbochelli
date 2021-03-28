@@ -8,6 +8,7 @@ function generateStatusFile() {
         "git log --format=short --no-decorate -n1 --oneline",
         "git count-objects -vH | awk '{if (NR==5) print $2$3}'",
         "du -sh . | awk '{print $1}'",
+        "ls -1 pdf | wc -l",
         "ls -1 blog/source/_posts/ | wc -l",
     ];
     final output = [];
@@ -22,7 +23,8 @@ Info|Value
 **Last commit**|${output[1]}
 **Repo size**|${output[2]}
 **Disk size**|${output[3]}
-**Total posts**|${output[4]}
+**Total PDFs**|${output[4]}
+**Total blog posts**|${output[5]}
 ';
     File.saveContent('static/status.md', markdown);
     trace("Saved status.md");
