@@ -47,7 +47,6 @@ r.{$DOMAIN:localhost} {
 
     handle_path /blog/* {
         redir /static/* https://{$DOMAIN:localhost}{path}
-        rewrite / /blog/public/home/
         rewrite * /blog/public{path}
         file_server
     }

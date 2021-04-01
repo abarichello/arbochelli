@@ -1,5 +1,7 @@
 # Donate
 
+Tip $5 here to help host this website:
+
 ## Paypal
 
 <form action="https://www.paypal.com/donate" method="post" target="_top">
@@ -13,5 +15,3 @@
 
 ## PIX (🇧🇷):
 <img src="/static/contact.png"></a><br>
-
-<img title="My signature" src="/static/signature.png"></img>
