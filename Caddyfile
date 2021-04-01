@@ -35,7 +35,7 @@ r.{$DOMAIN:localhost} {
     try_files {path}.ico /static/{path}
 
     file_server {
-        hide .git* .mscbackup .vscode *.html *.sh *.code-workspace README.md redirect src static status tmp .env *ocker* *.lock *.yml Caddyfile site
+        hide *.html *.sh *.md .git* *.lock *.yml .mscbackup .env .vscode redirect src static status tmp site *ocker* Caddyfile LICENSE
         browse template.html
     }
     file_server /status/* {
@@ -60,7 +60,6 @@ r.{$DOMAIN:localhost} {
         format json
         output file /tmp/arbochelli.log {
             roll_size 200mb
-            roll_keep 5
         }
     }
 }
