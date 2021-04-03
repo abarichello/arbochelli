@@ -22,4 +22,4 @@ This song plays during cutscenes in Larry's store.
 {% youtube zuUrkg5UpUE %}
 
 ## PDF
-{% pdf https://arbochelli.me/shadow-warrior2-larrys-blues %}
+{% pdf https://arbochelli.me/sw2-larrys-bluesinblue %}

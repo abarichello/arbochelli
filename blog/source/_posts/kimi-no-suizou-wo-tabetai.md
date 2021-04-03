@@ -18,4 +18,4 @@ I also have a version for two bass guitars here: https://arbochelli.me/pdf/Kimi_
 {% youtube wxAll3gp318 %}
 
 ## PDF
-{% pdf https://arbochelli.me/i-want-to-eat-your-pancreas %}
+{% pdf https://arbochelli.me/want-eat-your-pancreas %}
