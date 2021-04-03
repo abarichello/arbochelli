@@ -37,9 +37,10 @@ function createReplaceMap(lastEntry: Access): Map<String, String> {
     final title = getFeedRawTitle(lastEntry);
     final description: String = lastEntry.node.resolve("media:group").node.resolve("media:description").innerData;
 
-    final urlLine = description.split("\n")[0];
-    final pdfRegex = ~/https:\/\/.+/;
-    final pdfURL = pdfRegex.match(urlLine) ? pdfRegex.matched(0).replace("/p", "") : "";
+    final firstLine = description.split("\n")[0];
+    final firstLinkRegex = ~/https:\/\/.+/;
+    final blogURL = firstLinkRegex.match(firstLine) ? firstLinkRegex.matched(0) : "";
+    final pdfURL = blogURL.replace("aa.art.br", "arbochelli.me");
 
     final notesRegex = ~/Notes:.+/;
     final notes = notesRegex.match(description) ? notesRegex.matched(0).replace("Notes: ", "") : "";
