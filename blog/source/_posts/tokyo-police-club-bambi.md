@@ -17,4 +17,4 @@ Bass guitar tab/sheet music for Tokyo Police Club - Bambi.
 {% youtube 0DQWPDH3ldQ %}
 
 ## PDF
-{% pdf https://arbochelli.me/tokyo-police-club-bambi %}
+{% pdf https://arbochelli.me/tokyo-police-bambi %}

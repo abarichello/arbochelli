@@ -17,4 +17,4 @@ Bass guitar tab/sheet music for Gonzaguinha - Lindo Lago do Amor.
 {% youtube atbA7LqZykk %}
 
 ## PDF
-{% pdf https://arbochelli.me/gonzaguinha-lindo-lago-do-amor %}
+{% pdf https://arbochelli.me/gonzaguinha-lago-amor %}
