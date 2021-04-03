@@ -1,0 +1,14 @@
+rewrite /muse-dash-option-theme /pdf/Muse_Dash_-_Option_Theme.pdf
+rewrite /sing-yesterday-ep-9    /pdf/Sing_Yesterday_for_Me_-_Episode_9.pdf
+rewrite /potsu-lookin-up        /pdf/potsu_-_lookin_up.pdf
+rewrite /archosaur-city-b1      /pdf/Perfect_World_-_City_B1__Archosaur.pdf
+rewrite /want-eat-your-pancreas /pdf/Kimi_no_Suizou_wo_Tabetai.pdf
+rewrite /sw2-larrys-bluesinblue /pdf/Shadow_Warrior_2_-_Larrys_Blues_in_Blue.pdf
+rewrite /donut-county-lazyriver /pdf/Donut_County_-_Lazy_River.pdf
+rewrite /tokyo-police-bambi     /pdf/Tokyo_Police_Club_-_Bambi.pdf
+rewrite /beastars-many-stories  /pdf/Beastars_-_Many_Stories.pdf
+rewrite /gonzaguinha-lago-amor  /pdf/Gonzaguinha_-_Lindo_Lago_do_Amor.pdf
+rewrite /seyer-around-the-rosie /pdf/Michael_Seyer_-_Ring_Around_the_Rosie.pdf
+rewrite /tf2-it-hates-me-much   /pdf/Team_Fortress_2_-_It_Hates_Me_So_Much.pdf
+rewrite /tf2-seduce-me          /pdf/Team_Fortess_2_-_Seduce_Me!.pdf
+rewrite /josee-originofthe-name /pdf/Josee_the_Tiger_and_the_Fish_-_The_Origin_of_the_Name.pdf

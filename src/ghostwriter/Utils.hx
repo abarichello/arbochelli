@@ -13,6 +13,7 @@ var rssFilename = "yt-rss.xml";
 final remove = [
     "- ",
     ",",
+    "!",
 ];
 
 final replace = [

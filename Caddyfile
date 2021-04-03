@@ -8,19 +8,13 @@ log.{$DOMAIN:localhost} {
     reverse_proxy http://umami:3000
 }
 
-{$DOMAIN2} www.{$DOMAIN:localhost} {
-    redir https://{$DOMAIN:localhost}{uri}
+{$SHORTDOMAIN:a.localhost} {
+    import static/import/blog.txt
+    redir / https://{$DOMAIN:localhost}/
 }
 
-r.{$DOMAIN:localhost} {
-    root * redirect
-    redir /static/* https://{$DOMAIN:localhost}{uri}
-    file_server {
-        index redirect.html
-    }
-    handle_errors {
-        respond "{http.error.status_code} {http.error.status_text}"
-    }
+{$DOMAIN2} www.{$DOMAIN:localhost} {
+    redir https://{$DOMAIN:localhost}{uri}
 }
 
 {$DOMAIN:localhost} {$ONION_ADDR} {
@@ -28,14 +22,14 @@ r.{$DOMAIN:localhost} {
     encode gzip
     header Onion-Location {$ONION_ADDR}
 
-    import redirect/rewrite.txt
-    redir /p/* https://r.{$DOMAIN:localhost}/?r={http.request.uri.path.1}
+    import static/import/main.txt
+    import static/import/pdf.txt
 
     try_files {path}.html {path}
     try_files {path}.ico /static/{path}
 
     file_server {
-        hide *.html *.sh *.md .git* *.lock *.yml .mscbackup .env .vscode redirect src static status tmp site *ocker* Caddyfile LICENSE
+        hide *.html *.sh *.md .git* *.lock *.yml *ocker* .mscbackup .env .vscode redirect src static status tmp site Caddyfile LICENSE
         browse template.html
     }
     file_server /status/* {

@@ -1,0 +1,8 @@
+rewrite /                          {uri}?sort=name&order=desc
+rewrite /pdf/                      {uri}?sort=time&order=desc
+rewrite /mscz/                     {uri}?sort=time&order=desc
+rewrite /mp3/musescore/            {uri}?sort=time&order=desc
+rewrite /template                  /mscz/Template.mscz
+
+# Legacy
+redir /p/* https://{$DOMAIN:localhost}/blog/posts/

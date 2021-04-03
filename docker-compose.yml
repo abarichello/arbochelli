@@ -1,4 +1,4 @@
-version: '3.3'
+version: "3.3"
 services:
   updater:
     build:
@@ -7,6 +7,7 @@ services:
     environment:
       DOMAIN: ${DOMAIN:-localhost}
       DOMAIN2: ${DOMAIN2}
+      SHORTDOMAIN: ${SHORTDOMAIN}
       ONION_ADDR: ${ONION_ADDR}
     volumes:
       - .:/srv

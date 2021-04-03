@@ -1,4 +1,4 @@
-<!-- Test XML RSS for Poster.hx -->
+<!-- Test XML RSS for Ghostwriter.hx -->
 
 <feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
   <link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UCAUfIjiqDX4DoiSaoyIBpDg"></link>
@@ -27,8 +27,10 @@
       <media:title>Artist - Test [Bass Tabs/Sheet]</media:title>
       <media:content url="https://www.youtube.com/v/0DQWPDH3ldQ?version=3" type="application/x-shockwave-flash" width="640" height="390"></media:content>
       <media:thumbnail url="https://i1.ytimg.com/vi/0DQWPDH3ldQ/hqdefault.jpg" width="480" height="360"></media:thumbnail>
-      <media:description>Download sheet music/tab: https://arbochelli.me/p/archosaur-city-b1
+      <media:description>Download PDF: https://aa.art.br/archosaur-city-b1
 My website: https://arbochelli.me
+All sheet music: https://arbochelli.me/blog/posts/
+
 Notes: test notes
 
 #brazil #bass
