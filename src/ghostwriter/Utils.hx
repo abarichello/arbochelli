@@ -17,11 +17,13 @@ inline function assert(bool: Bool, str: String) {
     }
 }
 
-inline function getFeedRawTitle(feed: Access) {
-    return feed.node.title.innerData.replace(" [Bass Tabs/Sheet]", "");
+inline function getFeedRawTitle(feed: Access): String {
+    final title = feed.node.title.innerData;
+    final removalIndex = title.lastIndexOf("[") - 1;
+    return title.substring(0, removalIndex);
 }
 
-inline function getFeedFilename(feed: Access) {
+inline function getFeedFilename(feed: Access): String {
     final title = getFeedRawTitle(feed).toLowerCase();
     final remove = ~/[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'<>,.?\/]+/g;
     final multipleDashes = ~/-+/;
