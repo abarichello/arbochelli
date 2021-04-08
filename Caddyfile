@@ -22,12 +22,10 @@ log.{$DOMAIN:localhost} {
     templates
     encode gzip
     header Onion-Location {$ONION_ADDR}
+    try_files {path}.html {path}
 
     import static/import/main.txt
     import static/import/pdf.txt
-
-    try_files {path}.html {path}
-    try_files {path}.ico /static/{path}
 
     file_server {
         hide *.html *.sh *.md .git* *.lock *.yml *ocker* .mscbackup .env .vscode redirect src static status tmp site Caddyfile LICENSE
