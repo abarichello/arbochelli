@@ -3,7 +3,7 @@ title: potsu - lookin up
 comments: true
 categories:
   - [sheet-music]
-  - [indie]
+  - [general]
 tags:
   - bass
   - sheet

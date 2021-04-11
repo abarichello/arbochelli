@@ -49,7 +49,7 @@ function createReplaceMap(lastEntry: Access): Map<String, String> {
         "#anime",
         "#brazil",
         "#game",
-        "#indie"
+        "#general"
     ];
     final tag = searchTags.filter((t) -> description.contains(t))[0].substr(1);
     final youtubeHash = lastEntry.node.resolve("yt:videoId").innerData;
