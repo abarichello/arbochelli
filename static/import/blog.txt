@@ -12,4 +12,5 @@ redir /seyer-around-the-rosie https://{$DOMAIN:localhost}/blog/michael-seyer-rin
 redir /tf2-it-hates-me-much   https://{$DOMAIN:localhost}/blog/team-fortress-2-it-hates-me-so-much/
 redir /tf2-seduce-me          https://{$DOMAIN:localhost}/blog/team-fortress-2-seduce-me/
 redir /josee-originofthe-name https://{$DOMAIN:localhost}/blog/josee-the-tiger-and-the-fish-origin-of-the-name/
+redir /john-legend-save-room  https://{$DOMAIN:localhost}/blog/john-legend-save-room/
 #                max length |
