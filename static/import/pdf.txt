@@ -3,6 +3,7 @@ rewrite /sing-yesterday-ep-9    /pdf/Sing_Yesterday_for_Me_-_Episode_9.pdf
 rewrite /potsu-lookin-up        /pdf/potsu_-_lookin_up.pdf
 rewrite /archosaur-city-b1      /pdf/Perfect_World_-_City_B1__Archosaur.pdf
 rewrite /want-eat-your-pancreas /pdf/Kimi_no_Suizou_wo_Tabetai.pdf
+rewrite /want2eat-your-pancreas /pdf/Kimi_no_Suizou_wo_Tabetai(2_basses).pdf
 rewrite /sw2-larrys-bluesinblue /pdf/Shadow_Warrior_2_-_Larrys_Blues_in_Blue.pdf
 rewrite /donut-county-lazyriver /pdf/Donut_County_-_Lazy_River.pdf
 rewrite /tokyo-police-bambi     /pdf/Tokyo_Police_Club_-_Bambi.pdf

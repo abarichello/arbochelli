@@ -3,6 +3,7 @@ redir /sing-yesterday-ep-9    https://{$DOMAIN:localhost}/blog/sing-yesterday-fo
 redir /potsu-lookin-up        https://{$DOMAIN:localhost}/blog/potsu-lookin-up/
 redir /archosaur-city-b1      https://{$DOMAIN:localhost}/blog/perfect-world-city-b1-archosaur/
 redir /want-eat-your-pancreas https://{$DOMAIN:localhost}/blog/kimi-no-suizou-wo-tabetai/
+redir /want2eat-your-pancreas https://{$DOMAIN:localhost}/blog/kimi-no-suizou-wo-tabetai/
 redir /sw2-larrys-bluesinblue https://{$DOMAIN:localhost}/blog/shadow-warrior-2-larry-s-blues-in-blues/
 redir /donut-county-lazyriver https://{$DOMAIN:localhost}/blog/donut-county-lazy-river/
 redir /tokyo-police-bambi     https://{$DOMAIN:localhost}/blog/tokyo-police-club-bambi/
