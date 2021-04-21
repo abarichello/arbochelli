@@ -22,7 +22,8 @@ RUN yarn \
     && yarn clean \
     && yarn build \
     && git add source/_posts/ \
-    && (git commit -m 'Publish new post' || true) \
+    && LASTPOST=$(ls -1t blog/source/_posts/ | head -1) \
+    && (git commit -m $LASTPOST || true) \
     && git push token master
 
 FROM caddy:2.3.0-alpine as caddy
