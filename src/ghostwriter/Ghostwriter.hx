@@ -11,7 +11,7 @@ using StringTools;
 function readRSSFeed(): Access {
     final feed = File.getContent("./static/" + rssFilename);
     final xml = Parser.parse(feed);
-    return new Access(xml.firstElement()).nodes.entry[0];
+    return new Access(xml.firstElement());
 }
 
 function shouldPost(lastEntry: Access): Bool {
@@ -45,13 +45,8 @@ function createReplaceMap(lastEntry: Access): Map<String, String> {
     final notesRegex = ~/Notes:.+/;
     final notes = notesRegex.match(description) ? notesRegex.matched(0).replace("Notes: ", "") : "";
 
-    final searchTags = [
-        "#anime",
-        "#brazil",
-        "#game",
-        "#general"
-    ];
-    final tag = searchTags.filter((t) -> description.contains(t))[0].substr(1);
+    final tagsRegex = ~/#anime|#brazil|#game|#general/;
+    final tag = tagsRegex.match(description) ? tagsRegex.matched(0).replace("#", "") : "";
     final youtubeHash = lastEntry.node.resolve("yt:videoId").innerData;
 
     return [
@@ -75,7 +70,7 @@ function templatePost(title: String, replaceMap: Map<String, String>) {
 }
 
 function ghostwrite() {
-    final lastEntry = readRSSFeed();
+    final lastEntry = readRSSFeed().nodes.entry[0];
     if (shouldPost(lastEntry)) {
         final filename = getFeedFilename(lastEntry);
         final rawTitle = getFeedRawTitle(lastEntry);
