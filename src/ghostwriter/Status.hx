@@ -14,6 +14,7 @@ function generateStatusFile() {
     final output = [];
     for (cmd in commands) {
         final process = new sys.io.Process(cmd);
+        Utils.assert(process.exitCode() == 0, "Exit code different than zero");
         output.push(process.stdout.readLine());
     }
     final markdown = '
