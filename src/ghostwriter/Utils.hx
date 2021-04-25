@@ -24,12 +24,6 @@ inline function getFeedRawTitle(feed: Access): String {
 }
 
 inline function getFeedFilename(feed: Access): String {
-    final title = getFeedRawTitle(feed).toLowerCase();
-    final remove = ~/[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'<>,.?\/]+/g;
-    final multipleDashes = ~/-+/;
-    final trailingAndLeadingSeparator = ~/^-+|-+$/g;
-
-    final removedSpecial = remove.replace(title, "-");
-    final removedContiguous = multipleDashes.replace(removedSpecial, "-");
-    return trailingAndLeadingSeparator.replace(removedContiguous, "");
+    final title = getFeedRawTitle(feed);
+    return TitleCase.titlecase(title);
 }
