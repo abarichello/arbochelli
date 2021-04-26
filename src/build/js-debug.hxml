@@ -1,11 +1,12 @@
 --debug
+--each
+
 -cp src
 -js static/haxe.js
 -main src.Main
 --macro nullSafety("src", Strict)
 
 --next
---debug
 -cp blog.themes.solar.source.hx
 -js blog/themes/solar/source/hx/main.js
 -main blog.themes.solar.source.hx.Solar
