@@ -22,4 +22,4 @@ Bass guitar tab/sheet music for Josee, the Tiger and the fish - Origin of the Na
 {% youtube Y-o73WTBMTo %}
 
 ## PDF
-{% pdf https://arbochelli.me/josee-origin-of-name %}
+{% pdf https://arbochelli.me/josee-originofthe-name %}
