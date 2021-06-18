@@ -18,6 +18,7 @@ function main() {
     Sys.stdout().flush();
     final input = Sys.stdin().readLine();
     Utils.assert(input.length > 0, "Provide a non-empty title");
-    trace(titlecase(input));
+    Sys.stdout().writeString(titlecase(input));
+    Sys.stdout().flush();
 }
 #end
