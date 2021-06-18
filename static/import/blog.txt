@@ -15,4 +15,5 @@ redir /tf2-seduce-me          https://{$DOMAIN:localhost}/blog/team-fortress-2-s
 redir /josee-originofthe-name https://{$DOMAIN:localhost}/blog/josee-the-tiger-and-the-fish-origin-of-the-name/
 redir /john-legend-save-room  https://{$DOMAIN:localhost}/blog/john-legend-save-room/
 redir /yuru-camp-solo-camping https://{$DOMAIN:localhost}/blog/yuru-camp-season-2-a-taste-of-solo-camping/
+redir /ac-new-leaf-5pm        https://{$DOMAIN:localhost}/blog/animal-crossing-new-leaf-5pm/
 #                max length |

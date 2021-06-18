@@ -15,4 +15,5 @@ rewrite /tf2-seduce-me          /pdf/Team_Fortress_2_-_Seduce_Me!.pdf
 rewrite /josee-originofthe-name /pdf/Josee_the_Tiger_and_the_Fish_-_The_Origin_of_the_Name.pdf
 rewrite /john-legend-save-room  /pdf/John_Legend_-_Save_Room.pdf
 rewrite /yuru-camp-solo-camping /pdf/Yuru_Camp_S2_-_A_Taste_of_Solo_Camping.pdf
+rewrite /ac-new-leaf-5pm        /pdf/Animal_Crossing_New_Leaf_-_5PM.pdf
 #                  max length |
