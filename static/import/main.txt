@@ -1,7 +1,7 @@
 rewrite /                          {uri}?sort=name&order=desc
 rewrite /pdf/                      {uri}?sort=time&order=desc
 rewrite /mscz/                     {uri}?sort=time&order=desc
-rewrite /mp3/musescore/            {uri}?sort=time&order=desc
+rewrite /media/musescore-mp3/      {uri}?sort=time&order=desc
 rewrite /template                  /mscz/Template.mscz
 
 # Legacy
