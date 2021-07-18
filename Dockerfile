@@ -1,13 +1,14 @@
 FROM haxe:4.2.1-alpine as build
 
-RUN apk add --no-cache curl git nodejs npm \
+RUN apk add --no-cache curl git git-lfs nodejs npm \
     && npm install --global yarn \
     && yarn global add hexo-cli
 
 COPY . /arbochelli
 WORKDIR /arbochelli
 
-RUN git config pull.ff only \
+RUN git lfs install \
+    && git config pull.ff only \
     && git config user.email "webmaster@arbochelli.me" \
     && git config user.name "Ghostwriter" \
     && git pull token master \
