@@ -5,7 +5,7 @@
     email webmaster@arbochelli.me
 }
 
-log.{$DOMAIN:localhost} {
+log.{$SHORTDOMAIN:localhost} {
     reverse_proxy http://umami:3000
 }
 

@@ -9,7 +9,7 @@ WORKDIR /arbochelli
 
 RUN git config pull.ff only \
     && git config user.email "webmaster@arbochelli.me" \
-    && git config user.name "Barichello" \
+    && git config user.name "Ghostwriter" \
     && git pull token master \
     && git submodule update --recursive \
     && curl 'https://www.youtube.com/feeds/videos.xml?channel_id=UCQyPHw4V7du8Fx-o12_fudw' > static/yt-rss.xml \
