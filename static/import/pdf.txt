@@ -17,4 +17,5 @@ rewrite /john-legend-save-room  /pdf/John_Legend_-_Save_Room.pdf
 rewrite /yuru-camp-solo-camping /pdf/Yuru_Camp_S2_-_A_Taste_of_Solo_Camping.pdf
 rewrite /ac-new-leaf-5pm        /pdf/Animal_Crossing_New_Leaf_-_5PM.pdf
 rewrite /marisam-eu-sei-na-mira /pdf/Marisa_Monte_-_Eu_Sei_(Na_Mira).pdf
+rewrite /djavan-embola-caterete /pdf/Djavan_-_Embola_a_Bola_(Caterete).pdf
 #                  max length |
