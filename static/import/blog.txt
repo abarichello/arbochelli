@@ -16,6 +16,6 @@ redir /josee-originofthe-name https://{$DOMAIN:localhost}/blog/josee-the-tiger-a
 redir /john-legend-save-room  https://{$DOMAIN:localhost}/blog/john-legend-save-room/
 redir /yuru-camp-solo-camping https://{$DOMAIN:localhost}/blog/yuru-camp-season-2-a-taste-of-solo-camping/
 redir /ac-new-leaf-5pm        https://{$DOMAIN:localhost}/blog/animal-crossing-new-leaf-5pm/
-redir /marisam-eu-sei-na-mira https://{$DOMAIN:localhost}/blog/marisa-monte-eu-sei-na-mira
-redir /djavan-embola-caterete https://{$DOMAIN:localhost}/blog/djavan-embola-a-bola-caterete
+redir /marisam-eu-sei-na-mira https://{$DOMAIN:localhost}/blog/marisa-monte-eu-sei-na-mira/
+redir /djavan-embola-caterete https://{$DOMAIN:localhost}/blog/djavan-embola-a-bola-caterete/
 #                max length |

@@ -2,6 +2,8 @@ package src.ghostwriter;
 
 import haxe.io.Input;
 
+using StringTools;
+
 inline function titlecase(title: String): String {
     final remove = ~/[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'<>,.?\/]+/g;
     final multipleDashes = ~/-+/;
@@ -18,7 +20,7 @@ function main() {
     Sys.stdout().flush();
     final input = Sys.stdin().readLine();
     Utils.assert(input.length > 0, "Provide a non-empty title");
-    Sys.stdout().writeString(titlecase(input));
+    Sys.stdout().writeString(titlecase(input).replace("-pdf", ""));
     Sys.stdout().flush();
 }
 #end
