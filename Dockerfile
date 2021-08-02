@@ -11,8 +11,9 @@ RUN git lfs install \
     && git config pull.ff only \
     && git config user.email "webmaster@arbochelli.me" \
     && git config user.name "Ghostwriter" \
-    && git pull token master \
-    && git submodule update --recursive \
+    && git fetch \
+    && git reset --hard origin/master \
+    && git submodule foreach git pull origin master \
     && curl 'https://www.youtube.com/feeds/videos.xml?channel_id=UCQyPHw4V7du8Fx-o12_fudw' > static/yt-rss.xml \
     && haxelib install src/build/*.hxml --always \
     && haxe src/build/all.hxml
