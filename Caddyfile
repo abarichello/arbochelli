@@ -14,7 +14,7 @@ log.{$SHORTDOMAIN:localhost} {
     redir * https://{$DOMAIN:localhost}/blog/posts/?br=1
 }
 
-{$DOMAIN2} www.{$DOMAIN:localhost} {
+www.{$DOMAIN:localhost} {
     redir https://{$DOMAIN:localhost}{uri}
 }
 
