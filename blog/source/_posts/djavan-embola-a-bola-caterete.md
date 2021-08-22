@@ -22,4 +22,4 @@ A música original utiliza um contrabaixo.
 {% youtube LC7aKPcZIg0 %}
 
 ## PDF
-{% pdf https://arbochelli.me/djavan-embola-a-bola-caterete %}
+{% pdf https://arbochelli.me/djavan-embola-caterete %}
