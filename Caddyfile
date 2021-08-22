@@ -45,7 +45,7 @@ www.{$DOMAIN:localhost} {
     }
 
     handle_errors {
-        redir * /blog/posts/
+        redir * /blog/posts/?n={path}
     }
 
     log {
