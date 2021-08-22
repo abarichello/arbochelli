@@ -5,13 +5,18 @@ import haxe.io.Input;
 using StringTools;
 
 inline function titlecase(title: String): String {
+    final diacritics = ["ê" => "e"];
+    for (diacritic in diacritics.keyValueIterator()) {
+        if (title.contains(diacritic.key)) {
+            title = title.replace(diacritic.key, diacritic.value);
+        }
+    }
     final remove = ~/[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'<>,.?\/]+/g;
     final multipleDashes = ~/-+/;
     final trailingAndLeadingSeparator = ~/^-+|-+$/g;
-
-    final removedSpecial = remove.replace(title, "-");
-    final removedContiguous = multipleDashes.replace(removedSpecial, "-");
-    return trailingAndLeadingSeparator.replace(removedContiguous, "").toLowerCase();
+    title = remove.replace(title, "-");
+    title = multipleDashes.replace(title, "-");
+    return trailingAndLeadingSeparator.replace(title, "").toLowerCase();
 }
 
 #if TITLECASE_TEST
