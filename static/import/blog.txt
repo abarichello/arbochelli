@@ -18,4 +18,5 @@ redir /yuru-camp-solo-camping https://{$DOMAIN:localhost}/blog/yuru-camp-season-
 redir /ac-new-leaf-5pm        https://{$DOMAIN:localhost}/blog/animal-crossing-new-leaf-5pm/
 redir /marisam-eu-sei-na-mira https://{$DOMAIN:localhost}/blog/marisa-monte-eu-sei-na-mira/
 redir /djavan-embola-caterete https://{$DOMAIN:localhost}/blog/djavan-embola-a-bola-caterete/
+redir /connan-charlotte-thong https://{$DOMAIN:localhost}/blog/connan-mockasin-charlottes-thong/
 #                max length |
