@@ -11,6 +11,7 @@ log.{$SHORTDOMAIN:localhost} {
 
 {$SHORTDOMAIN:a.localhost} {
     import static/import/blog.txt
+    redir /donate https://{$DOMAIN:localhost}/blog/donate/
     redir * https://{$DOMAIN:localhost}/blog/posts/?br=1
 }
 

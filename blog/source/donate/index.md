@@ -1,6 +1,6 @@
 # Donate
 
-Tip $5 here to help host this website.
+Monthly hosting cost: $8
 
 ## Paypal
 
