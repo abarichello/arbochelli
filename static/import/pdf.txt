@@ -19,4 +19,5 @@ rewrite /ac-new-leaf-5pm        /pdf/Animal_Crossing_New_Leaf_-_5PM.pdf
 rewrite /marisam-eu-sei-na-mira /pdf/Marisa_Monte_-_Eu_Sei_(Na_Mira).pdf
 rewrite /djavan-embola-caterete /pdf/Djavan_-_Embola_a_Bola_(Caterete).pdf
 rewrite /connan-charlotte-thong /pdf/Connan_Mockasin_-_Charlottes_Thong.pdf
+rewrite /hidamari-no-kaori      /pdf/Nekopara_Anime_Ending_-_Hidamari_no_Kaori.pdf
 #                  max length |
