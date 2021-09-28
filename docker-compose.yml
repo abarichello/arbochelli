@@ -6,7 +6,6 @@ services:
       dockerfile: Dockerfile
     environment:
       DOMAIN: ${DOMAIN:-localhost}
-      DOMAIN2: ${DOMAIN2}
       SHORTDOMAIN: ${SHORTDOMAIN}
       ONION_ADDR: ${ONION_ADDR}
     volumes:
