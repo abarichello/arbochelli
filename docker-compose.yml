@@ -7,7 +7,6 @@ services:
     environment:
       DOMAIN: ${DOMAIN:-localhost}
       SHORTDOMAIN: ${SHORTDOMAIN}
-      ONION_ADDR: ${ONION_ADDR}
     volumes:
       - .:/srv
       - .:/etc/caddy
@@ -20,3 +19,4 @@ networks:
   default:
     external:
       name: arbochelli
+

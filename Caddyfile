@@ -19,10 +19,9 @@ www.{$DOMAIN:localhost} {
     redir https://{$DOMAIN:localhost}{uri}
 }
 
-{$DOMAIN:localhost} {$ONION_ADDR} {
+{$DOMAIN:localhost} {
     templates
     encode gzip
-    header Onion-Location {$ONION_ADDR}
     try_files {path}.html {path}
 
     import static/import/main.txt
