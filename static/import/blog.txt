@@ -19,4 +19,5 @@ redir /ac-new-leaf-5pm        https://{$DOMAIN:localhost}/blog/animal-crossing-n
 redir /marisam-eu-sei-na-mira https://{$DOMAIN:localhost}/blog/marisa-monte-eu-sei-na-mira/
 redir /djavan-embola-caterete https://{$DOMAIN:localhost}/blog/djavan-embola-a-bola-caterete/
 redir /hidamari-no-kaori      https://{$DOMAIN:localhost}/blog/nekopara-anime-ending-hidamari-no-kaori/
+redir /seu-jorge-e-depois     https://{$DOMAIN:localhost}/blog/seu-jorge-e-depois/
 #                max length |
