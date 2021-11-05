@@ -20,4 +20,5 @@ redir /marisam-eu-sei-na-mira https://{$DOMAIN:localhost}/blog/marisa-monte-eu-s
 redir /djavan-embola-caterete https://{$DOMAIN:localhost}/blog/djavan-embola-a-bola-caterete/
 redir /hidamari-no-kaori      https://{$DOMAIN:localhost}/blog/nekopara-anime-ending-hidamari-no-kaori/
 redir /seu-jorge-e-depois     https://{$DOMAIN:localhost}/blog/seu-jorge-e-depois/
+redir /muse-dash-marija-maid  https://{$DOMAIN:localhost}/blog/muse-dash-marija-maid/
 #                max length |

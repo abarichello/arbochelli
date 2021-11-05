@@ -21,4 +21,5 @@ rewrite /djavan-embola-caterete /pdf/Djavan_-_Embola_a_Bola_(Caterete).pdf
 rewrite /connan-charlotte-thong /pdf/Connan_Mockasin_-_Charlottes_Thong.pdf
 rewrite /hidamari-no-kaori      /pdf/Nekopara_Anime_Ending_-_Hidamari_no_Kaori.pdf
 rewrite /seu-jorge-e-depois     /pdf/Seu_Jorge_-_E_Depois.pdf
+rewrite /muse-dash-marija-maid  /pdf/Muse_Dash_-_Marija_Maid.pdf
 #                  max length |
