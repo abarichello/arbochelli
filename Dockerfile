@@ -27,7 +27,7 @@ RUN yarn \
     && (git commit -m $(ls -1t source/_posts/ | head -1) || true) \
     && git push token master
 
-FROM caddy:2.3.0-alpine as caddy
+FROM caddy:2.5.1-alpine as caddy
 
 COPY --from=build /arbochelli /arbochelli
 WORKDIR /arbochelli
