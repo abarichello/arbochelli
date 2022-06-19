@@ -1,6 +1,4 @@
 {
-	# local_certs
-	# debug
 	admin off
 	email webmaster@arbochelli.me
 }

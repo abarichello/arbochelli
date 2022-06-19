@@ -25,7 +25,8 @@ RUN yarn \
     && yarn build \
     && git add source/_posts/ \
     && (git commit -m $(ls -1t source/_posts/ | head -1) || true) \
-    && git push token master
+    && git push token master \
+    && rm -rf ../.git/ .git/
 
 FROM caddy:2.5.1-alpine as caddy
 
