@@ -1,58 +1,58 @@
 {
-    # local_certs
-    # debug
-    admin off
-    email webmaster@arbochelli.me
+	# local_certs
+	# debug
+	admin off
+	email webmaster@arbochelli.me
 }
 
 log.{$SHORTDOMAIN:localhost} {
-    reverse_proxy http://umami:3000
+	reverse_proxy http://umami:3000
 }
 
 {$SHORTDOMAIN:a.localhost} {
-    import static/import/blog.txt
-    redir /donate https://{$DOMAIN:localhost}/blog/donate/
-    redir * https://{$DOMAIN:localhost}/blog/posts/?br=1
+	import static/import/blog.txt
+	redir /donate https://{$DOMAIN:localhost}/blog/donate/
+	redir * https://{$DOMAIN:localhost}/blog/posts/?br=1
 }
 
 www.{$DOMAIN:localhost} {
-    redir https://{$DOMAIN:localhost}{uri}
+	redir https://{$DOMAIN:localhost}{uri}
 }
 
 {$DOMAIN:localhost} {
-    templates
-    encode gzip
-    try_files {path}.html {path}
+	templates
+	encode gzip
+	try_files {path}.html {path}
 
-    import static/import/main.txt
-    import static/import/pdf.txt
+	import static/import/main.txt
+	import static/import/pdf.txt
 
-    file_server {
-        hide *.html *.sh *.md .git* *.lock *.yml *ocker* .mscbackup .env .vscode redirect src static status tmp site Caddyfile LICENSE
-        browse template.html
-    }
-    file_server /status/* {
-        index status.html
-    }
-    file_server /static/* {
-        browse template.html
-    }
+	file_server {
+		hide *.html *.sh *.md .git* *.lock *.yml *ocker* .mscbackup .env .vscode redirect src static status tmp site Caddyfile LICENSE
+		browse template.html
+	}
+	file_server /status/* {
+		index status.html
+	}
+	file_server /static/* {
+		browse template.html
+	}
 
-    handle_path /blog/* {
-        redir /static/* https://{$DOMAIN:localhost}{path}
-        rewrite * /blog/public{path}
-        file_server
-    }
+	handle_path /blog/* {
+		redir /static/* https://{$DOMAIN:localhost}{path}
+		rewrite * /blog/public{path}
+		file_server
+	}
 
-    handle_errors {
-        redir * /blog/posts/?n={path}
-    }
+	handle_errors {
+		redir * /blog/posts/?n={path}
+	}
 
-    log {
-        level DEBUG
-        format json
-        output file /tmp/arbochelli.log {
-            roll_size 200mb
-        }
-    }
+	log {
+		level DEBUG
+		format json
+		output file /tmp/arbochelli.log {
+			roll_size 200mb
+		}
+	}
 }
