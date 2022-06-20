@@ -48,7 +48,6 @@ www.{$DOMAIN:localhost} {
 
 	log {
 		level DEBUG
-		format json
 		output file /tmp/arbochelli.log {
 			roll_size 200mb
 		}
