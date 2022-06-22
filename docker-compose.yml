@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     environment:
       DOMAIN: ${DOMAIN:-localhost}
-      SHORTDOMAIN: ${SHORTDOMAIN}
+      SHORTDOMAIN: ${SHORTDOMAIN:-a.localhost}
     volumes:
       - .:/srv
       - .:/etc/caddy
@@ -19,4 +19,3 @@ networks:
   default:
     external:
       name: arbochelli
-

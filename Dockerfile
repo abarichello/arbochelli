@@ -2,7 +2,7 @@ FROM haxe:4.2.1-alpine as build
 
 RUN apk add --no-cache curl git git-lfs nodejs npm \
     && npm install --global yarn \
-    && yarn global add hexo-cli
+    && yarn global add hexo hexo-cli
 
 COPY . /arbochelli
 WORKDIR /arbochelli
@@ -25,7 +25,7 @@ RUN yarn \
     && yarn build \
     && git add source/_posts/ \
     && (git commit -m $(ls -1t source/_posts/ | head -1) || true) \
-    && git push token master \
+    && git push origin master \
     && rm -rf ../.git/ .git/
 
 FROM caddy:2.5.1-alpine as caddy
