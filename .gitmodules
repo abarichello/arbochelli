@@ -1,3 +1,6 @@
 [submodule "blog/themes/solar"]
 	path = blog/themes/solar
 	url = https://github.com/aBARICHELLO/solar-theme-hexo
+[submodule "blog/themes/cactus"]
+	path = blog/themes/cactus
+	url = git@github.com:abarichello/hexo-theme-cactus
