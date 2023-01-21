@@ -13,6 +13,7 @@ RUN git lfs install \
     && git config user.name "Ghostwriter" \
     && git fetch \
     && git reset --hard origin/master \
+    && git submodule update --init --recursive \
     && git submodule foreach git pull origin master \
     && curl 'https://www.youtube.com/feeds/videos.xml?channel_id=UCQyPHw4V7du8Fx-o12_fudw' > static/yt-rss.xml \
     && haxelib install src/build/*.hxml --always \
